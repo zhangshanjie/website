@@ -1,30 +1,13 @@
 <template>
   <!-- 头部整体盒子 -->
-  <div id="header" class="container-fuild .container-fluid">
-    <!-- 头部顶部 -->
-    <!-- <div class="header-top container-fuild hidden-xs">
-      <div class="container">
-        <div class="server pull-left">
-          <span class="glyphicon glyphicon-earphone"></span>888-888-888
-          <span class="glyphicon glyphicon-envelope"></span>liyunkun_11@163.com
-          <span class="glyphicon glyphicon-time"></span>7x24小时为您服务
-        </div>
-        <div class="shejiao pull-right">
-          <span class="glyphicon glyphicon-hand-right"></span>赶快联系我们吧！
-          <span class="glyphicon glyphicon-hand-left"></span>
-        </div>
-      </div>
-    </div> -->
+  <div id="header" class="container-fuild">
     <!-- 电脑导航 -->
-    <div class="header-nav container hidden-xs row">
+    <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
-      <div class="col-md-3">
       <div class="header-nav-logo">
         <img src="@/assets/img/logoIcon.png">
       </div>
-      </div>
       <!-- 导航内容 -->
-      <div class="col-md-7">
       <ul class="header-nav-wrapper">
         <li
           v-for="(item,index) in navList"
@@ -44,17 +27,12 @@
           </dl>
         </li>
       </ul>
-      </div>
       <!--塘主-->
-      <div class="col-md-1">
       <div class="myIcon">
         <img src="@/assets/img/myIcon.png">
       </div>
-      </div>
       <!--登录/注册-->
-      <div class="col-md-1">
       <button class="header-btn">注册/登录</button>
-      </div>
     </div>
 
     <!-- 手机导航 -->
@@ -74,7 +52,7 @@
           <span :class="menuClass"></span>
         </div>
         <!-- 导航内容 -->
-        <!-- <ul id="menu" class="header-nav-m-wrapper collapse">
+        <ul id="menu" class="header-nav-m-wrapper collapse">
           <li
             v-for="(item,index) in navList"
             :key="index"
@@ -89,42 +67,7 @@
             </router-link>
             
           </li>
-        </ul> -->
-        <dl class="foldpanel" id="my-foldpanel">
-			<dt>语言</dt>
-			<dd>
-				<a>Java</a>
-				<a>javascript</a>
-				<a>python</a>
-			</dd>
-
-			<dt>运动</dt>
-			<dd>
-				<a>足球</a>
-				<a>羽毛球</a>
-				<a>篮球</a>
-			</dd>
-			
-			<dt>乐器</dt>
-			<dd>
-				<a>钢琴</a>
-				<a>手风琴</a>
-			</dd>
-			
-			<dt>男装</dt>
-			<dd>
-				<a>T恤</a>
-				<a>皮衣夹</a>
-				<a>西服套装</a>
-			</dd>
-			
-			<dt>配饰</dt>
-			<dd>
-				<a>女士围巾</a>
-				<a>大衣毛衣</a>
-			</dd>
-
-		</dl>
+        </ul>
       </div>
     </div>
   </div>
@@ -268,12 +211,6 @@ export default {
     };
   },
   methods: {
-    $('dl#my-foldpanel').foldpanel({
-					init:false,     	 //是否开启初始化功能,默认关闭
-					init_index: 0, // 传的数字代表初始化展开的索引，0就是第一个
-					time: 400, // panel展开动画时间, 默认为 100ms
-					dbclose: false // 在此点击关闭, 默认为 true
-				}),
     navClick(index, name) {
       this.navIndex = index;
       sessionStorage.setItem('navIndex',index)
@@ -292,8 +229,10 @@ export default {
 <style scoped>
 /* 顶部 */
 #header {
+  position: relative;
   background: rgba(0,0,0,0.1);
   transition: all ease 0.6s;
+  z-index: 999;
 }
 #header .header-top {
   height: 50px;
@@ -319,10 +258,9 @@ export default {
 }
 /* 导航栏logo图片 */
 #header .header-nav .header-nav-logo img {
-  width: 312%;
   position: absolute;
-  top: 111px;
-  left: -107%;
+  top: 50px;
+  left: -60%;
   right: 0;
   bottom: 0;
   margin: auto;
@@ -332,7 +270,7 @@ export default {
   width: 28px;
   height: 28px;
   position: relative;
-  top: 15px;
+  top: -45px;
   left: 54%;
   right: 0;
   bottom: 0;
@@ -349,8 +287,8 @@ export default {
   border: none;
   background: #fff;
   position: relative;
-  top: 12px;
-  left: 36%;
+  top: -14px;
+  left: 99%;
 }
 /* 导航栏 导航容器 */
 #header .header-nav-fixed .header-nav-wrapper {
@@ -419,11 +357,11 @@ export default {
   display: none;
   position: absolute;
   width: 160px;
-  top: 96%;
+  top: 99%;
   left: 0;
   z-index: 999999;
   /* box-shadow: 0 0 3px 1px #ccc; */
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.3);
 }
 /* 导航栏 每个导航下面的二级导航容器的每个导航 */
 #header .header-nav .header-nav-wrapper > li > dl > dt {
