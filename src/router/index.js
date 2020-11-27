@@ -94,6 +94,14 @@ export default new Router({
           meta: {
             title: '相关服务'
           }
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: resolve => require(['@/components/login'],resolve),
+          meta: {
+            title: '登录'
+          }
         }
       ]
     }

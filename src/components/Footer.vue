@@ -67,7 +67,7 @@
         <!-- 部分：一 -->
         <div class="col-md-3">
           <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-6">
               <ul>
                 <li>首页</li>
                 <li>赛事中心</li>
@@ -76,7 +76,7 @@
                 <li>视频中心</li>
               </ul>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
               <ul>
                 <li>公司简介</li>
                 <li>公司架构</li>
@@ -85,6 +85,7 @@
                 <li>联系我们</li>
               </ul>
             </div>
+            
           </div>
         </div>
         <div class="col-md-2">
@@ -144,7 +145,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-md-6 col-sm-8">
+            <div class="col-md-6 col-sm-8 col-xs-12">
               <ul>
                 <li>
                   <img style="display:inline-block" src="@/assets/img/rqcode.png" alt="" />
@@ -155,12 +156,13 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2 col-sm-12 col-xs-12">
-          <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12 r_k">
+        <div class="col-md-2 col-sm-12 col-xs-12 ">
+          <div class="row r_k">
+            <div class="col-md-11 col-sm-12 col-xs-12 ">
               <ul>
+                <li>渔界竞钓</li>
                 <li style="line-height: 10px">
-                  <p>渔界竞钓</p>
+                  
                   <img style="display:inline-block" src="@/assets/img/ios.png" alt="" />
                 </li>
                  <li>
@@ -214,14 +216,12 @@ export default {
   width: 100%;
   height: 100px;
 }
-@media (min-width: 1280px) {
+@media (min-width: 1400px) {
   .container {
-    width: 1280px;
+    width: 1400px;
   }
 }
 .r_k {
-  padding-top: 15px;
-  width: 136px;
   height: 198px;
   background: #384158;
   border-radius: 2px;
