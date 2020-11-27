@@ -214,6 +214,10 @@ export default {
   width: 100%;
   height: 100px;
 }
+.row{
+  margin-right: 0;
+  margin-left: 0;
+}
 @media (min-width: 1280px) {
   .container {
     width: 1280px;
@@ -225,6 +229,7 @@ export default {
   height: 198px;
   background: #384158;
   border-radius: 2px;
+  margin-left: 26%;
 }
 
 .rq_font {

@@ -98,7 +98,7 @@ export default {
 
 /* 轮播图 */
 #swiper {
-  width: 1920px;
+  width: 100%;
   position: relative;
   top: -63px;
 }
@@ -113,13 +113,24 @@ export default {
 #swiper .banner-swiper .swiper-slide{
   position: relative;
 }
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    background-image: url('../assets/img/right.png')  !important;
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    background-image: url('../assets/img/left.png')  ;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    width: 75px;
+    height: 55px;
+    background-size: 60px 60px;
+  }
 
 /* 媒体查询（手机） */
 @media screen and (max-width: 768px) {
   #swiper {
-    width: 768px;
+    width: 100%;
     position: relative;
-    top: -112px;
+    top: 0;
   }
   #bigData {
     padding: 30px;
@@ -131,13 +142,31 @@ export default {
     font-size: 20px;
     margin: 10px 0 10px;
   }
+  #swiper .banner-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    background-image: url('../assets/img/right.png')  !important;
+    right:-22px
+  }
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    background-image: url('../assets/img/left.png')  ;
+    left:-22px
+  }
+  .swiper-button-next, .swiper-button-prev{
+    width: 26%;
+    background-size: 34px 34px;
+  }
 
 }
 
 /* 媒体查询（平板） */
 @media screen and (min-width: 768px) and (max-width: 996px) {
   #swiper {
-    width: 996px;
+    width: 100%;
+    position: relative;
+    top: -63px;
   }
   #bigData {
     padding: 60px;
@@ -149,6 +178,7 @@ export default {
     font-size: 30px;
     margin: 30px 0 15px;
   }
+  
 }
 </style>
 

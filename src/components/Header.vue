@@ -40,9 +40,11 @@
       <div class="header-nav-m-logo">
         <img class="center-block" src="@/assets/img/logoIcon.png" alt="logo">
       </div>
+      
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
-        {{menuName}}
+        
+        <!-- {{menuName}} -->
         <div
           class="header-nav-m-menu-wrapper"
           data-toggle="collapse"
@@ -52,8 +54,21 @@
           <span :class="menuClass"></span>
         </div>
         <!-- 导航内容 -->
-        <ul id="menu" class="header-nav-m-wrapper collapse">
-          <li
+        <ul id="menu" class="header-nav-m-wrapper collapse"> 
+            <ul class="asideMenu"> 
+            <li v-for="(item,index) in menuList"> 
+              <div class="oneMenu" @click="showToggle(item,index)"> 
+              <img v-bind:src="item.imgUrl" /> 
+              <span id="names">{{item.name}}</span> 
+              </div> 
+              <ul v-show="item.isSubShow"> 
+              <li v-for="subItem in item.subItems"> 
+                <div class="oneMenuChild">{{subItem.name}}</div> 
+              </li> 
+              </ul> 
+            </li> 
+            </ul> 
+          <!-- <li
             v-for="(item,index) in navList"
             :key="index"
             :class="index==navIndex?'active':''"
@@ -65,20 +80,19 @@
               {{item.name}}
               <i class="underline"></i>
             </router-link>
-            
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
   </div>
 </template>
-<script>
+<script type="text/javascript">
 export default {
   name: "Header",
   data() {
     return {
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
-      menuName: "首页",
+      // menuName: "首页",
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
@@ -93,10 +107,10 @@ export default {
               name: "钓点推荐",
               path: "/software/smartTown"
             },
-            {
-              name: "渔界咨询",
-              path: "/software/smartTown"
-            },
+            // {
+            //   name: "渔界咨询",
+            //   path: "/software/smartTown"
+            // },
             {
               name: "视频中心",
               path: "/software/smartTown"
@@ -207,15 +221,140 @@ export default {
             },
           ]
         }
-      ]
+      ],
+       menuList:[ 
+     { 
+      name:'首页', 
+      isSubShow:false, 
+      subItems:[ 
+       { 
+        name:'赛事中心'
+       }, 
+       { 
+        name:'钓点推荐'
+       }, 
+      //  { 
+      //   name:'渔界咨询'
+      //  }, 
+       { 
+        name:'视频中心'
+       } 
+      ] 
+     }, 
+     { 
+      name:'公司简介', 
+      isSubShow:false, 
+      subItems:[ 
+       { 
+        name:'公司架构'
+       }, 
+       { 
+        name:'营销合作'
+       }, 
+       { 
+        name:'招聘'
+       },
+       { 
+        name:'联系我们'
+       },
+      ] 
+     }, 
+     { 
+      name:'渔界咨询', 
+      isSubShow:false, 
+      subItems:[ 
+       { 
+        name:'公告'
+       }, 
+       { 
+        name:'赛事'
+       }, 
+       { 
+        name:'钓场'
+       },
+       { 
+        name:'渔界攻略'
+       },
+      ] 
+     }, 
+     { 
+      name:'旅钓', 
+      
+      isSubShow:false, 
+      subItems:[ 
+       { 
+        name:'定制出行'
+       }, 
+       { 
+        name:'境内'
+       }, 
+       { 
+        name:'境外'
+       }, 
+      ] 
+     }, 
+     { 
+      name:'APP下载', 
+      
+      isSubShow:false, 
+      subItems:[ 
+      ] 
+     }, 
+     { 
+      name:'最新赛事', 
+      
+      isSubShow:false, 
+      subItems:[ 
+        { 
+        name:'官方赛'
+       }, 
+       { 
+        name:'主题赛'
+       }, 
+       { 
+        name:'公益赛'
+       },
+       { 
+        name:'查看排名'
+       },
+      ] 
+     }, 
+     { 
+      name:'荣耀殿堂', 
+      
+      isSubShow:false, 
+      subItems:[ 
+      ] 
+     }, 
+    ] 
     };
   },
+  created(){
+  
+  },
   methods: {
-    navClick(index, name) {
-      this.navIndex = index;
-      sessionStorage.setItem('navIndex',index)
-      this.menuName = name;
-    },
+// 点击展开折叠菜单事件 
+   showToggle:function(item,ind){ 
+     document.getElementById("names").style.color = "#6C98FE";
+     $(".oneMenu").on("touchstart", function() {
+      $(this).css({opacity:0.8});
+});
+    this.menuList.forEach(i => { 
+     // 判断如果数据中的menuList[i]的show属性不等于当前数据的isSubShow属性那么menuList[i]等于false 
+     if (i.isSubShow !== this.menuList[ind].isSubShow) { 
+      i.isSubShow = false; 
+     } 
+    }); 
+    item.isSubShow = !item.isSubShow; 
+    console.log(item.name) 
+   }, 
+
+
+    // navClick(index, name) {
+    //   this.navIndex = index;
+    //   sessionStorage.setItem('navIndex',index)
+    //   this.menuName = name;
+    // },
     menuClick() {
       if (this.menuClass == "glyphicon glyphicon-menu-down") {
         this.menuClass = "glyphicon glyphicon-menu-up";
@@ -383,52 +522,54 @@ export default {
 #header .header-nav .header-nav-wrapper > li > dl > dt:hover {
   cursor: pointer;
 }
-@media screen and (max-width: 992px) {
+
+@media screen and (max-width: 997px) {
   #header .header-nav-m {
     position: relative;
   }
   /* 导航栏logo容器 */
   #header .header-nav-m .header-nav-m-logo {
-    height: 62px;
+    height: 64px;
     position: relative;
+    background: #060451;
   }
   /* 导航栏logo图片 */
-  #header .header-nav-m .header-nav-m-logo img {
-    width: 323px;
-    height: 90px;
+  #header .header-nav-m .header-nav-m-logo .center-block {
+    width: 80%;
     position: absolute;
-    top: 49px;
-    left: -22%;
+    top: 39px;
+    left: -46%;
     right: 0;
     bottom: 0;
     margin: auto;
   }
-
-  .header-nav-logo{
-    display: none;
+  #header .header-nav .header-nav-logo img{
+    position: absolute;
+    top: 50px;
+    left: -70%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
   }
-  /*导航塘主 */
-  #header .myIcon{
-    display: none;
-  }
-  /*登录/注册 btn*/
-  .header-btn{
-    display: none;
+  .menuIcon{
+    width: 28px !important; 
+    margin-left: 89%;
+    padding-top: 5%;
   }
   /* 导航栏  菜单容器 */
-  #header .header-nav-m .header-nav-m-menu {
+  /* #header .header-nav-m .header-nav-m-menu {
     color: #fff;
     height: 50px;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 50px;
-    background: rgba(0,0,0,0.3);
+    background: #060451;
     position: relative;
-  }
+  } */
   /* 导航栏 菜单图标 */
   #header .header-nav-m .header-nav-m-menu-wrapper {
     position: absolute;
-    top: 50%;
-    right: 20px;
+    top: 72%;
+    right: 2px;
     margin-top: -20px;
     width: 50px;
     height: 40px;
@@ -439,11 +580,12 @@ export default {
   /* 导航栏 */
   #header .header-nav-m .header-nav-m-wrapper {
     position: absolute;
-    top: 50px;
+    top: 100%;
     left: 0;
     width: 100%;
     background: rgba(0,0,0,0.5);
     z-index: 9999999;
+    color: #fff;
   }
   /* 导航栏 每个导航 */
   #header .header-nav-m .header-nav-m-wrapper > li {
@@ -455,23 +597,18 @@ export default {
   #header .header-nav-m .header-nav-m-wrapper > li > a {
     color: #fff;
     font-size: 16px;
-    font-family: Alibaba-PuHuiTi;
     padding: 15px 0;
     position: relative;
-  }
-  /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
-  #header .header-nav-m .header-nav-m-wrapper > li > a:hover {
-    color: #6C98FE;
-    text-decoration: none;
-  }
-  /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
-  #header .header-nav-m .header-nav-m-wrapper > li.active > a {
-    color: #6C98FE;
-    text-decoration: none;
   }
   /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
   #header .header-nav .header-nav-wrapper > li > a > span {
     font-size: 10px;
+  }
+  .oneMenu, .oneMenuChild{
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ececec;
   }
 }
 </style>
