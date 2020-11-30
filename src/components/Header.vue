@@ -5,46 +5,54 @@
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
-        <img src="@/assets/img/logoIcon.png">
+        <a class="navbar-brand" href="#">
+          <img src="@/assets/img/logoIcon.png" />
+        </a>
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
         <li
-          v-for="(item,index) in navList"
+          v-for="(item, index) in navList"
           :key="index"
-          :class="index==navIndex?'active':''"
-          @click="navClick(index,item.name)"
+          :class="index == navIndex ? 'active' : ''"
+          @click="navClick(index, item.name)"
         >
           <router-link :to="item.path">
-            {{item.name}}
+            {{ item.name }}
             <!-- <span v-if="item.children.length>0" class="glyphicon glyphicon-menu-down"></span> -->
             <i class="underline"></i>
           </router-link>
-          <dl v-if="item.children.length>0">
-            <dt v-for="(i,n) in item.children" :key="n">
-              <router-link class="childrenList" :to="i.path">{{i.name}}</router-link>
+          <dl v-if="item.children.length > 0">
+            <dt v-for="(i, n) in item.children" :key="n">
+              <router-link class="childrenList" :to="i.path">{{
+                i.name
+              }}</router-link>
             </dt>
           </dl>
         </li>
       </ul>
       <!--塘主-->
       <div class="myIcon">
-        <img src="@/assets/img/myIcon.png">
+        <img src="@/assets/img/myIcon.png" />
       </div>
       <!--登录/注册-->
-      <button class="header-btn">注册/登录</button>
+      <button class="header-btn" @click="login">注册/登录</button>
     </div>
 
     <!-- 手机导航 -->
     <div class="header-nav-m container-fuild visible-xs">
       <div class="header-nav-m-logo">
-        <img class="center-block" src="@/assets/img/logoIcon.png" alt="logo">
+        <img class="center-block" src="@/assets/img/logoIcon.png" alt="logo" />
       </div>
       
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
+<<<<<<< HEAD
         
         <!-- {{menuName}} -->
+=======
+        {{ menuName }}
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
         <div
           class="header-nav-m-menu-wrapper"
           data-toggle="collapse"
@@ -54,6 +62,7 @@
           <span :class="menuClass"></span>
         </div>
         <!-- 导航内容 -->
+<<<<<<< HEAD
         <ul id="menu" class="header-nav-m-wrapper collapse"> 
             <ul class="asideMenu"> 
             <li v-for="(item,index) in menuList"> 
@@ -70,17 +79,26 @@
             </ul> 
           <!-- <li
             v-for="(item,index) in navList"
+=======
+        <ul id="menu" class="header-nav-m-wrapper collapse">
+          <li
+            v-for="(item, index) in navList"
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
             :key="index"
-            :class="index==navIndex?'active':''"
-            @click="navClick(index,item.name)"
+            :class="index == navIndex ? 'active' : ''"
+            @click="navClick(index, item.name)"
             data-toggle="collapse"
             data-target="#menu"
           >
             <router-link :to="item.path">
-              {{item.name}}
+              {{ item.name }}
               <i class="underline"></i>
             </router-link>
+<<<<<<< HEAD
           </li> -->
+=======
+          </li>
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
         </ul>
       </div>
     </div>
@@ -91,9 +109,19 @@ export default {
   name: "Header",
   data() {
     return {
+<<<<<<< HEAD
       checkindex: 0, // 初始化第一个栏块高亮
+=======
+<<<<<<< HEAD
+>>>>>>> 103449e3af5f301d90f2301d516dd7e5439dbe1e
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
       // menuName: "首页",
+=======
+      navIndex: sessionStorage.getItem("navIndex")
+        ? sessionStorage.getItem("navIndex")
+        : 0,
+      menuName: "首页",
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
@@ -102,21 +130,28 @@ export default {
           children: [
             {
               name: "赛事中心",
-              path: "/software/smartTown"
+              path: "/software/smartTown",
             },
             {
               name: "钓点推荐",
-              path: "/software/smartTown"
+              path: "/software/smartTown",
             },
+<<<<<<< HEAD
             // {
             //   name: "渔界咨询",
             //   path: "/software/smartTown"
             // },
+=======
+            {
+              name: "渔界咨询",
+              path: "/software/smartTown",
+            },
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
             {
               name: "视频中心",
-              path: "/software/smartTown"
+              path: "/software/smartTown",
             },
-          ]
+          ],
         },
         {
           name: "公司简介",
@@ -124,21 +159,21 @@ export default {
           children: [
             {
               name: "公司架构",
-              path: "/software/smartTown"
+              path: "/software/smartTown",
             },
             {
               name: "营销合作",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "招聘",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "联系我们",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
-          ]
+          ],
         },
         {
           name: "渔界咨询",
@@ -146,21 +181,21 @@ export default {
           children: [
             {
               name: "公告",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "赛事",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "钓场",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "渔界攻略",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
-          ]
+          ],
         },
         {
           name: "旅钓",
@@ -168,17 +203,17 @@ export default {
           children: [
             {
               name: "定制出行",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "境内",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "境外",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
-          ]
+          ],
         },
         {
           name: "APP下载",
@@ -186,9 +221,9 @@ export default {
           children: [
             {
               name: "APP下载",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
-          ]
+          ],
         },
         {
           name: "最新赛事",
@@ -196,21 +231,21 @@ export default {
           children: [
             {
               name: "官方赛",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "主题赛",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "公益赛",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
             {
               name: "查看排名",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
-          ]
+          ],
         },
         {
           name: "荣耀殿堂",
@@ -218,8 +253,9 @@ export default {
           children: [
             {
               name: "荣耀殿堂",
-              path: "/software/bigData"
+              path: "/software/bigData",
             },
+<<<<<<< HEAD
           ]
         }
       ],
@@ -328,15 +364,24 @@ export default {
       ] 
      }, 
     ] 
+=======
+          ],
+        },
+      ],
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
     };
   },
   created(){
   
   },
   methods: {
+<<<<<<< HEAD
     toggle (index) {
       this.checkindex = index
     },
+=======
+<<<<<<< HEAD
+>>>>>>> 103449e3af5f301d90f2301d516dd7e5439dbe1e
 // 点击展开折叠菜单事件 
    showToggle(item,ind){ 
 //      $(".oneMenu").on("touchstart", function() {
@@ -353,26 +398,45 @@ export default {
    }, 
 
 
+<<<<<<< HEAD
     navClick(index, name) {
       this.navIndex = index;
       sessionStorage.setItem('navIndex',index)
       this.menuName = name;
     },
+=======
+    // navClick(index, name) {
+    //   this.navIndex = index;
+    //   sessionStorage.setItem('navIndex',index)
+    //   this.menuName = name;
+    // },
+=======
+    //跳转到登录页
+    login(){
+      this.$router.push({ path: "/login" });
+    },
+    navClick(index, name) {
+      this.navIndex = index;
+      sessionStorage.setItem("navIndex", index);
+      this.menuName = name;
+    },
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
+>>>>>>> 103449e3af5f301d90f2301d516dd7e5439dbe1e
     menuClick() {
       if (this.menuClass == "glyphicon glyphicon-menu-down") {
         this.menuClass = "glyphicon glyphicon-menu-up";
       } else {
         this.menuClass = "glyphicon glyphicon-menu-down";
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>
 /* 顶部 */
 #header {
   position: relative;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   transition: all ease 0.6s;
   z-index: 999;
 }
@@ -402,13 +466,13 @@ export default {
 #header .header-nav .header-nav-logo img {
   position: absolute;
   top: 50px;
-  left: -60%;
+  left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
 }
 /*导航塘主 */
-#header .myIcon{
+#header .myIcon {
   width: 28px;
   height: 28px;
   position: relative;
@@ -420,9 +484,9 @@ export default {
   z-index: 99;
 }
 /*登录/注册 btn*/
-.header-btn{
+.header-btn {
   width: 78px;
-  color: #6C98FE;
+  color: #6c98fe;
   font-size: 12px;
   padding: 10px 10px;
   border-radius: 25px;
@@ -431,6 +495,10 @@ export default {
   position: relative;
   top: -14px;
   left: 99%;
+}
+/* container重写最小width */
+.container {
+  min-width: 1400px;
 }
 /* 导航栏 导航容器 */
 #header .header-nav-fixed .header-nav-wrapper {
@@ -441,17 +509,19 @@ export default {
   float: right;
   margin: 0;
   max-width: 800px;
+  margin-right: 130px;
 }
 /* 导航栏 每个导航 */
 #header .header-nav .header-nav-wrapper > li {
   float: left;
+  padding-left: 35px;
   margin: 0 15px;
   position: relative;
 }
 /* 导航栏 每个导航下面的 a 链接 */
 #header .header-nav .header-nav-wrapper > li > a {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Alibaba-PuHuiTi;
   padding: 15px 0;
   position: relative;
@@ -466,7 +536,7 @@ export default {
   height: 2px;
   opacity: 0;
   transition: all 0.6s ease;
-  background-color: #6C98FE;
+  background-color: #6c98fe;
 }
 /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
 #header .header-nav .header-nav-wrapper > li > a > span {
@@ -475,7 +545,7 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
 #header .header-nav .header-nav-wrapper > li > a:hover {
-  color: #6C98FE;
+  color: #6c98fe;
   text-decoration: none;
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标滑上去下划线的样式 */
@@ -490,9 +560,9 @@ export default {
 }
 /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
 #header .header-nav .header-nav-wrapper > li.active > a {
-  color: #6C98FE;
+  color: #6c98fe;
   text-decoration: none;
-  border-bottom: 2px solid #6C98FE;
+  border-bottom: 2px solid #6c98fe;
 }
 /* 导航栏 每个导航下面的二级导航容器 */
 #header .header-nav .header-nav-wrapper > li > dl {
@@ -503,20 +573,20 @@ export default {
   left: 0;
   z-index: 999999;
   /* box-shadow: 0 0 3px 1px #ccc; */
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 /* 导航栏 每个导航下面的二级导航容器的每个导航 */
 #header .header-nav .header-nav-wrapper > li > dl > dt {
   width: 100%;
   padding: 10px;
 }
-.childrenList{
+.childrenList {
   color: #fff;
 }
 /* 导航栏 每个导航下面的二级导航容器的每个导航 当鼠标滑上时的样式*/
 #header .header-nav .header-nav-wrapper > li > dl > dt > a:hover {
   text-decoration: none;
-  color:#6C98FE ;
+  color: #6c98fe;
 }
 /* 导航栏 滑上一级导航显示二级导航 */
 #header .header-nav .header-nav-wrapper > li:hover dl {
@@ -553,6 +623,7 @@ export default {
     bottom: 0;
     margin: auto;
   }
+<<<<<<< HEAD
   #header .header-nav .header-nav-logo img{
     position: absolute;
     top: 50px;
@@ -565,6 +636,19 @@ export default {
     width: 28px !important; 
     margin-left: 89%;
     padding-top: 5%;
+=======
+
+  .header-nav-logo {
+    display: none;
+  }
+  /*导航塘主 */
+  #header .myIcon {
+    display: none;
+  }
+  /*登录/注册 btn*/
+  .header-btn {
+    display: none;
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
   }
   /* 导航栏  菜单容器 */
   /* #header .header-nav-m .header-nav-m-menu {
@@ -572,7 +656,11 @@ export default {
     height: 50px;
     font-size: 16px;
     line-height: 50px;
+<<<<<<< HEAD
     background: #060451;
+=======
+    background: rgba(0, 0, 0, 0.3);
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
     position: relative;
   } */
   /* 导航栏 菜单图标 */
@@ -593,7 +681,7 @@ export default {
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 9999999;
     color: #fff;
   }
@@ -610,6 +698,19 @@ export default {
     padding: 15px 0;
     position: relative;
   }
+<<<<<<< HEAD
+=======
+  /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
+  #header .header-nav-m .header-nav-m-wrapper > li > a:hover {
+    color: #6c98fe;
+    text-decoration: none;
+  }
+  /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
+  #header .header-nav-m .header-nav-m-wrapper > li.active > a {
+    color: #6c98fe;
+    text-decoration: none;
+  }
+>>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
   /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
   #header .header-nav .header-nav-wrapper > li > a > span {
     font-size: 10px;

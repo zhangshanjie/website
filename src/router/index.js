@@ -96,13 +96,30 @@ export default new Router({
           }
         },
         {
+<<<<<<< HEAD
           path: '/Enroll',
           name: 'Enroll',
           component: resolve => require(['@/view/Enroll'],resolve),
           meta: {
             title: '注册'
+=======
+          path: '/login',
+          name: 'login',
+          component: resolve => require(['@/components/login'],resolve),
+          meta: {
+            title: '登录'
+          }
+        },
+        {
+          path: '/ForgetPsd',
+          name: 'ForgetPsd',
+          component: resolve => require(['@/view/ForgetPsd'],resolve),
+          meta: {
+            title: '忘记密码'
+>>>>>>> 103449e3af5f301d90f2301d516dd7e5439dbe1e
           }
         }
+        
       ]
     }
   ]

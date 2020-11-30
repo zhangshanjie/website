@@ -1,0 +1,604 @@
+From 4a690994bac74af6c407dd472807d49a85b67d18 Mon Sep 17 00:00:00 2001
+From: zhangshanjie <1455018278@qq.com>
+Date: Mon, 30 Nov 2020 16:49:35 +0800
+Subject: [PATCH] =?UTF-8?q?=E7=99=BB=E5=BD=95=E5=92=8C=E5=BF=98=E8=AE=B0?=
+ =?UTF-8?q?=E5=AF=86=E7=A0=81?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ src/assets/img/eyes.png         | Bin 0 -> 482 bytes
+ src/assets/img/login_button.png | Bin 0 -> 4164 bytes
+ src/assets/img/open_eyes.png    | Bin 0 -> 1276 bytes
+ src/assets/img/yanzhenma.png    | Bin 0 -> 596 bytes
+ src/components/login.vue        |  61 ++++++++--
+ src/router/index.js             |   9 ++
+ src/view/ForgetPsd.vue          | 262 ++++++++++++++++++++++++++++++++++++++++
+ 7 files changed, 324 insertions(+), 8 deletions(-)
+ create mode 100644 src/assets/img/eyes.png
+ create mode 100644 src/assets/img/login_button.png
+ create mode 100644 src/assets/img/open_eyes.png
+ create mode 100644 src/assets/img/yanzhenma.png
+ create mode 100644 src/view/ForgetPsd.vue
+
+diff --git a/src/assets/img/eyes.png b/src/assets/img/eyes.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..33eec1697cffa1cf104095a4919ce8c5d61147f4
+GIT binary patch
+literal 482
+zcmV<80UiE{P)<h;3K|Lk000e1NJLTq000pH000RH1^@s6)ab_y00050Nkl<ZC{taL
+zJ&03L5QWdV?*&Y=Xk{xRVk3epXyp$m2-+;{77BqaY%(_r%3>4|LHq$>gCzIe7ZfX9
+z78?;nMA*hg3qeH0&PGH_k%vVfc}HH@gs@YcfjKkZ%n(~5#yC&%oTMX?_BiKulx6vs
+z<aYoc%d%W=wOSu$ZJZ>%UT<HLBpHB1Bwqk{GaL@TNctsdXPTx5NS*?)1mK&bmiPX1
+z<sUbRF`ftT1i)hex6JHMp63lo_a(6k0JqJo-|cqik|enS;0j4^W{((SJOkjBq=xr?
+zt!f%VIP9EzF6ktI%Oq_)kv!dOHs4k{&-1gAD&l2kS@s*in)iNXvRVk?o^x&lU^jq@
+za=NvdU792@#_IsCvET16jz*((l1paxa+Bn!bMD>NqXSr&)MQz9g5+zGt?^Al2p34^
+zBv*@~xZ7^Gix{Jqbcf`207a#}_YXRqPQ6~QUzKzdz>1kYoPH;SaFApGu$Sah02^gl
+zey!DN{|1A>wlq!mlRPeIS<+7c7rpoIr{9^yjxins&;T$GU>AV7O_CoZKLL1VW*f7f
+Y|6pIU0CXfy(*OVf07*qoM6N<$f^`?p`2YX_
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/assets/img/login_button.png b/src/assets/img/login_button.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..fadbaf0f3ef9844b532e84f15cb36d7a03693e8e
+GIT binary patch
+literal 4164
+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
+O0000<MNUMnLSTX_J*(RQ
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/assets/img/open_eyes.png b/src/assets/img/open_eyes.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..6241245846d81e9b1ea39295b01d563c87ff7fec
+GIT binary patch
+literal 1276
+zcmV<Y1OxktP)<h;3K|Lk000e1NJLTq001xm001xu1^@s6R|5Hm000ETNkl<ZXhZE-
+zTWDNW6kY2~CZWL=tkJ3{?T6K()jkkZ;`>oeg$mL7AqbMz%pG&5wH9Acupfe`)Y#6A
+zGZUL22!2!(G@!Nks!GuhiM2+lFKDSBR$~xbNAj4vWTu(PoykmQCbvZbbN}u=d#}CL
+z-siE;CFc0UInEz70snUeYZa(fz-I<(Q^;omeY@8x;5&sr0ZvN=9_i9q3{0$sYgW^k
+zn*c3_&;;U~3_syd5W@hE%5^`5aR-&E8+@gMCw=mt{YkuKw-!!}qs67$La+tE!Yav(
+z2-<68_SOZlw{s&$s`Ss8&#D4;T$=%H1#t0ff)?>P25^UCac8x7RSB@WwGM8E_>I*D
+zs?h#3818V|IZ&Z}Wff>oC|D2oS%^=R0v7ZXjQI}2g@Ahv#kNXGOtYh27=zi?9pZR7
+zjItGo#I#D#P7pWbgQ*)}JAmXEPcH5bEg1HW+X+1bX?r;Wr^a(wQ|7|w1UE;+{CXyg
+z83ov}@mqnwYheCdH!iPssi#4#rPy35NF<?slGc<JA@mvXIoIf`JX_%ykb1}o2R|-_
+zQBpu8u2w;>18B@T3m6_J7k7u4wBzp2B>#zqxS|xe9Z&577%3|N_{FizCG80{2Bo6}
+znmj&9f)7S5_7}q`DxkyBrL5CO04|zxV!vbY-t_zSJ*pob(I|j}j%8MrA{dFQQ_!Oo
+z2tYE(1-%=1B5iBO)d#56<M*p3cw3jv9}BUH3b5nu9suj7GOw4rtiYD+dq=mfpsOJO
+ze>s*pdj<h-3%aKg0R&e@Eq;@W5l?jz^ooDevCREt1=tB~f%H<&Q25XZn>+FrXl(pu
+zF!0Ibw*!u4t}g_(6Iu@`oruaFrEYP;!TtGh+z&w9p8G~V=7iYkwaKf171NSB=z9?J
+zCXK#yEOXs7a`^(%!}}p_OV;Diyc8}lDR+&?Xl2YNt%?XZHJ#iq09>1~68@b4FOP?L
+zB#WIVpd;?SOJHq!kl+x3)?F5VDkKu=)wvqe?^O{jW6XM<7j5Gog=U-LS}LGl(DG9n
+z@Lrc??)D`hlbM9xf|Oa*z8|vB3Gu#SI8_O#bP8nz#B?X9_kEMkq?LC$VeTu2Rn-)l
+z%xu|3oDF2hQ@a6f@Fzk&juqHglzgnpMLb1p=4~`<*Vd!?jpItMkwvo<aXcC1((L~4
+z#psyrHkt-0c94nc?Ft2^Wqb3hx+;}YZvU=ENFcx!J0IquLZ6OAs;8hCtnMI70~Tu~
+z02~0h(FyUeH>jQ2R_k^ET3wj{4nh-Kr|tU*ErYZhK(hy@`c@)0m5MZT1co6#84a`7
+zOE$7g4QfDo{X78R$`V4p1^EU?(HY&ubSsj3A~CgrdS2c>$WJquMK0A&6MRR)i%ysa
+z3dv@6Go@AvT#_CmbYy~ogWdyZDoJW4@%Xfs<8-vs*&s7rXwpI;42+r+1BG{jQq!qD
+z@pn^$JAWOBbwzun(|MuEo9i=QDU$$x0CZTykfHev!tsnhvB;HsK857~mjSrU+opSB
+zoS7?SVJ7G7rQR!KPXAUZtjL`Fu~pfAf99>q{*^fM6#PY~3GkOc|K7C<_|Ks~gjxms
+m<<Gx&tpfgY=nrAeSKvP_S20frf7HPM0000<MNUMnLSTZ`MpBRf
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/assets/img/yanzhenma.png b/src/assets/img/yanzhenma.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..21cd98765b01a55c835b8b0e2fc267a65b14f63f
+GIT binary patch
+literal 596
+zcmeAS@N?(olHy`uVBq!ia0vp^0zfRp!3-o*pRS7lQY`6?zK#qG8~eHcB(ehe3dtTp
+zz6=aiY77hwEes65fI<x~7#K<o7#Ln9FfdrnU|<k0n6oR;1}Jedz$e5tXU4x_fPlU!
+zm;dDhq#R3v{DK+uuikV}X`HCZ;ZeBnY)81j!8`xne0sh5<5uR+-)x<iEBq)4nECtp
+zndZs`HX9pi{c|PKLPUz!-`ey@v`y&6+dT=7{dO1v4P#95c6V_SxNiFe$YC$>^mS!_
+z!Y#+IB_{Ue&RL+)Tu&Fr5Q)p76RwLj83?$rzv=4QtB~|Q>3#3t|MQJFC(fum@yzes
+zyPKQ}DKj=&OcC--@><H8vdOZ0$*0yuy+WB<ix)|^tU70UMKq$US@LX0bjIu_3!I;n
+zSysQ;c-&5A5o4Q+vP5#4zd`DAp3kh)7Uj2^>f3GLWY66wTv|V2a{qys^}O?!TWarX
+uNnCHg?{4a!_B&rBYdc==y*J+>W`D4^!R^1BcozX3%HZkh=d#Wzp$PyU4IbhE
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/components/login.vue b/src/components/login.vue
+index 508a8b7..95cc2bf 100644
+--- a/src/components/login.vue
++++ b/src/components/login.vue
+@@ -22,26 +22,44 @@
+             >
+               <i slot="prefix"
+                 ><el-image
+-                  style="width: 100%; height: 20px; margin-top: 10px"
++                  style="width: 11px; height: 18px; margin-top: 10px"
+                   src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/ec91321d039a4daebd75d9ed8b6e8a62.png"
+-                  :fit="fit"
++                 
+                 ></el-image>
+               </i>
+             </el-input>
+           </el-form-item>
+           <el-form-item prop="pass">
+             <el-input
++             :type="view == true ? 'password' : 'text'"
+               placeholder="请输入密码"
+               v-model="loginform.password"
+               style="width: 260px; height: 38px; border-radius: 4px"
+             >
+               <i slot="prefix"
+                 ><el-image
+-                  style="width: 100%; height: 20px; margin-top: 10px"
++                  style="width: 14px; height: 16px; margin-top: 10px"
+                   src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/bb837702e61c401bbf1d26cd09c42459.png"
+-                  :fit="fit"
++                 
+                 ></el-image>
+               </i>
++               <i slot="suffix" v-if="view">
++                  <el-image
++                    @click.stop="openView"
++                    class="openViews"
++                    style="width: 17px; height: 9px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/4970a1c2dee446f6b509052262cc508d.png"
++                  ></el-image>
++                </i>
++                <i slot="suffix" v-else>
++                  <el-image
++                    @click.stop="closeView"
++                    class="closeView"
++                    style="width: 18px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/258298badd8e4676b401fef284a62516.png"
++                  ></el-image>
++                </i>
++              
+             </el-input>
+             <!-- 新用户去注册 -->
+             <div class="login_flexBox">
+@@ -51,14 +69,20 @@
+                 >
+               </div>
+               <div class="forget_psd">
+-                <el-button type="text" class="new_users">忘记密码?</el-button>
++                <el-button type="text" @click="forget" class="new_users">忘记密码?</el-button>
+               </div>
+             </div>
+           </el-form-item>
+ 
+-          <el-form-item style="margin-top:-15px">
++          <!-- <el-form-item style="margin-top:-15px">
+              <el-button  style="width:260px">登 录</el-button>
+-          </el-form-item>
++          </el-form-item> -->
++          <el-form-item>
++              <el-image
++                class="submit_login"
++                src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/4148d47f3a32467eb8e9be5736db1dba.png"
++              ></el-image>
++            </el-form-item>
+         </el-form>
+       </div>
+     </div>
+@@ -70,6 +94,7 @@ export default {
+   name: "login",
+   data() {
+     return {
++      view:true,
+       labelPosition: "right",
+       loginform: {
+         name: "",
+@@ -143,6 +168,18 @@ export default {
+         }
+       });
+     },
++    //忘记密码
++    forget(){
++        this.$router.push({ path: "/ForgetPsd" });
++    },
++     //关闭密码明文
++    closeView() {
++      this.view = true;
++    },
++    //开启确认明文
++    openView() {
++      this.view = false;
++    },
+   },
+   mounted() {},
+ };
+@@ -158,7 +195,7 @@ a {
+   display: flex;
+   padding: 200px 0;
+   width: 100%;
+-  height: 100%;
++  height: 973px;
+   background: url(http://fishingcircles.oss-cn-beijing.aliyuncs.com/651062bd3e014de78bed8116542f6f56.png)
+     no-repeat center;
+   background-repeat: no-repeat;
+@@ -221,4 +258,12 @@ a {
+ .forget_psd {
+   margin-left: 120px;
+ }
++.submit_login{
++  position: absolute;
++  right: 51%;
++  width: 290px;
++  cursor: pointer;
++
++
++}
+ </style>
+\ No newline at end of file
+diff --git a/src/router/index.js b/src/router/index.js
+index f0938a4..7107bd6 100644
+--- a/src/router/index.js
++++ b/src/router/index.js
+@@ -102,7 +102,16 @@ export default new Router({
+           meta: {
+             title: '登录'
+           }
++        },
++        {
++          path: '/ForgetPsd',
++          name: 'ForgetPsd',
++          component: resolve => require(['@/view/ForgetPsd'],resolve),
++          meta: {
++            title: '忘记密码'
++          }
+         }
++        
+       ]
+     }
+   ]
+diff --git a/src/view/ForgetPsd.vue b/src/view/ForgetPsd.vue
+new file mode 100644
+index 0000000..e10eb85
+--- /dev/null
++++ b/src/view/ForgetPsd.vue
+@@ -0,0 +1,262 @@
++<template>
++  <div>
++    <div class="login">
++      <div class="forget_box">
++        <div slot="header" class="clearfix">
++          <span>忘记密码</span>
++        </div>
++        <div class="login_info">
++          <el-form
++            class="demo-ruleForm"
++            ref="lform"
++            :model="loginform"
++            :rules="rules"
++            label-width="80px"
++          >
++            <el-form-item prop="name">
++              <!-- <el-input name="name" v-model="loginform.name"></el-input> -->
++              <el-input
++                placeholder="请输入手机号码"
++                v-model="loginform.name"
++                style="width: 260px; height: 38px; border-radius: 4px"
++              >
++                <i slot="prefix"
++                  ><el-image
++                    style="width: 11px; height: 18px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/ec91321d039a4daebd75d9ed8b6e8a62.png"
++                  ></el-image>
++                </i>
++              </el-input>
++            </el-form-item>
++            <el-form-item>
++              <el-input
++                placeholder="请输入验证码"
++                style="width: 260px; height: 38px"
++                v-model="input3"
++              >
++                <i slot="prefix">
++                  <el-image
++                    style="width: 16px; height: 18px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/e155bd3084504025b787c72c055d9c8f.png"
++                  ></el-image>
++                </i>
++                <i slot="suffix">
++                  <el-button type="text" class="getQR">获取验证码</el-button>
++                </i>
++              </el-input>
++            </el-form-item>
++            <el-form-item prop="pass">
++              <el-input
++                :type="ComformViews == true ? 'password' : 'text'"
++                placeholder="再次输入新密码"
++                v-model="loginform.pass"
++                style="width: 260px; height: 38px; border-radius: 4px"
++              >
++                <i slot="prefix"
++                  ><el-image
++                    style="width: 14px; height: 16px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/bb837702e61c401bbf1d26cd09c42459.png"
++                  ></el-image>
++                </i>
++                <i slot="suffix" v-if="ComformViews">
++                  <el-image
++                    @click.stop="openComfirmViews"
++                    class="openViews"
++                    style="width: 17px; height: 9px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/4970a1c2dee446f6b509052262cc508d.png"
++                  ></el-image>
++                </i>
++                <i slot="suffix" v-else>
++                  <el-image
++                    @click.stop="closeComfirmViews"
++                    class="closeView"
++                    style="width: 18px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/258298badd8e4676b401fef284a62516.png"
++                  ></el-image>
++                </i>
++              </el-input>
++              <!-- 新用户去注册 -->
++            </el-form-item>
++            <el-form-item>
++              <el-input
++                :type="view == true ? 'password' : 'text'"
++                placeholder="再次输入新密码"
++                v-model="loginform.ComfirmPassWord"
++                style="width: 260px; height: 38px; border-radius: 4px"
++              >
++                <i slot="prefix"
++                  ><el-image
++                    style="width: 14px; height: 16px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/bb837702e61c401bbf1d26cd09c42459.png"
++                  ></el-image>
++                </i>
++                <i slot="suffix" v-if="view">
++                  <el-image
++                    @click.stop="openView"
++                    class="openViews"
++                    style="width: 17px; height: 9px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/4970a1c2dee446f6b509052262cc508d.png"
++                  ></el-image>
++                </i>
++                <i slot="suffix" v-else>
++                  <el-image
++                    @click.stop="closeView"
++                    class="closeView"
++                    style="width: 18px; margin-top: 10px"
++                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/258298badd8e4676b401fef284a62516.png"
++                  ></el-image>
++                </i>
++              </el-input>
++              <div class="login_flexBox">
++                <div class="forget_psd">
++                  <el-button type="text" @click="goLogin" class="new_users"
++                    >已记得，去登录》</el-button
++                  >
++                </div>
++              </div>
++            </el-form-item>
++
++            <el-form-item>
++              <el-image
++                class="submit_login"
++                src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/4148d47f3a32467eb8e9be5736db1dba.png"
++              ></el-image>
++            </el-form-item>
++          </el-form>
++        </div>
++      </div>
++    </div>
++  </div>
++</template>
++<script>
++export default {
++  name: "ForgetPassword",
++  data() {
++    return {
++      input3: "", //
++      view: true, //确定新密码明文状态
++      ComformViews: true, //设置新密码明文状态
++      labelPosition: "right",
++      loginform: {
++        name: "",
++        pass: "",
++        ComfirmPassWord: "",
++      },
++      rules: {
++        name: [{ required: true, message: "请输入手机号码", trigger: "blur" }],
++        pass: [
++          { required: true, message: "请输入密码", trigger: "blur" },
++          {
++            min: 5,
++            max: 20,
++            message: "密码长度在 5 到 20 个字符",
++            trigger: "blur",
++          },
++        ],
++      },
++    };
++  },
++  methods: {
++    //关闭确认密码明文
++    closeView() {
++      this.view = true;
++    },
++    //开启确认明文
++    openView() {
++      this.view = false;
++    },
++    //关闭设置新密码明文状态
++    closeComfirmViews() {
++      this.ComformViews = true;
++    },
++    //开启设置新密码明文状态
++    openComfirmViews() {
++      this.ComformViews = false;
++    },
++    //已记得去登录
++    goLogin(){
++
++    },
++  },
++};
++</script>
++<style  scoped>
++.getQR {
++  font-size: 14px;
++  font-family: Alibaba PuHuiTi;
++  font-weight: 500;
++  color: #6c98fe;
++}
++.submit_login {
++  cursor: pointer;
++  width: 290px;
++}
++.login {
++  display: flex;
++  justify-content: center;
++  align-items: center;
++  padding: 200px 0;
++  width: 100%;
++  height: 973px;
++  background: url(http://fishingcircles.oss-cn-beijing.aliyuncs.com/651062bd3e014de78bed8116542f6f56.png)
++    no-repeat center;
++  background-repeat: no-repeat;
++  background-size: cover;
++  background-position: center;
++  background-origin: content-box;
++}
++.forget_box {
++  width: 710px;
++  height: 510px;
++  background: #ffffff;
++  box-shadow: 0px 14px 28px 4px rgba(97, 139, 237, 0.18);
++  border-radius: 10px;
++}
++.clearfix:before,
++.clearfix:after {
++  display: table;
++  content: "";
++}
++.clearfix:after {
++  clear: both;
++}
++.clearfix {
++  padding-top: 15px;
++  padding-bottom: 15px;
++  border-bottom: solid 1px #f4f4f4;
++}
++.clearfix span {
++  display: block;
++  text-align: center;
++  letter-spacing: 1px;
++  font-size: 20px;
++  font-family: Alibaba PuHuiTi;
++  font-weight: bold;
++  color: #333333;
++}
++.login_info {
++  text-align: center;
++  margin-left: -50px;
++  margin-top: 20px;
++}
++.closeView {
++  cursor: pointer;
++}
++.openViews {
++  cursor: pointer;
++}
++.login_flexBox {
++  display: flex;
++  justify-content: flex-end;
++  align-items: center;
++}
++.forget_psd {
++  margin-right: 210px;
++}
++.new_users {
++  font-size: 12px;
++  font-family: Alibaba PuHuiTi;
++  font-weight: 500;
++  color: #6c98fe;
++}
++</style>
+\ No newline at end of file
+-- 
+2.12.2.windows.2
+
