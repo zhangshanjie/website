@@ -47,12 +47,8 @@
       
       <!-- 导航栏 -->
       <div class="header-nav-m-menu text-center">
-<<<<<<< HEAD
         
         <!-- {{menuName}} -->
-=======
-        {{ menuName }}
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
         <div
           class="header-nav-m-menu-wrapper"
           data-toggle="collapse"
@@ -62,7 +58,6 @@
           <span :class="menuClass"></span>
         </div>
         <!-- 导航内容 -->
-<<<<<<< HEAD
         <ul id="menu" class="header-nav-m-wrapper collapse"> 
             <ul class="asideMenu"> 
             <li v-for="(item,index) in menuList"> 
@@ -79,11 +74,6 @@
             </ul> 
           <!-- <li
             v-for="(item,index) in navList"
-=======
-        <ul id="menu" class="header-nav-m-wrapper collapse">
-          <li
-            v-for="(item, index) in navList"
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
             :key="index"
             :class="index == navIndex ? 'active' : ''"
             @click="navClick(index, item.name)"
@@ -94,11 +84,7 @@
               {{ item.name }}
               <i class="underline"></i>
             </router-link>
-<<<<<<< HEAD
           </li> -->
-=======
-          </li>
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
         </ul>
       </div>
     </div>
@@ -109,19 +95,8 @@ export default {
   name: "Header",
   data() {
     return {
-<<<<<<< HEAD
       checkindex: 0, // 初始化第一个栏块高亮
-=======
-<<<<<<< HEAD
->>>>>>> 103449e3af5f301d90f2301d516dd7e5439dbe1e
-      navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
-      // menuName: "首页",
-=======
-      navIndex: sessionStorage.getItem("navIndex")
-        ? sessionStorage.getItem("navIndex")
-        : 0,
       menuName: "首页",
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
@@ -136,17 +111,10 @@ export default {
               name: "钓点推荐",
               path: "/software/smartTown",
             },
-<<<<<<< HEAD
             // {
             //   name: "渔界咨询",
             //   path: "/software/smartTown"
             // },
-=======
-            {
-              name: "渔界咨询",
-              path: "/software/smartTown",
-            },
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
             {
               name: "视频中心",
               path: "/software/smartTown",
@@ -255,7 +223,6 @@ export default {
               name: "荣耀殿堂",
               path: "/software/bigData",
             },
-<<<<<<< HEAD
           ]
         }
       ],
@@ -364,24 +331,15 @@ export default {
       ] 
      }, 
     ] 
-=======
-          ],
-        },
-      ],
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
     };
   },
   created(){
   
   },
   methods: {
-<<<<<<< HEAD
     toggle (index) {
       this.checkindex = index
     },
-=======
-<<<<<<< HEAD
->>>>>>> 103449e3af5f301d90f2301d516dd7e5439dbe1e
 // 点击展开折叠菜单事件 
    showToggle(item,ind){ 
 //      $(".oneMenu").on("touchstart", function() {
@@ -398,30 +356,11 @@ export default {
    }, 
 
 
-<<<<<<< HEAD
     navClick(index, name) {
       this.navIndex = index;
       sessionStorage.setItem('navIndex',index)
       this.menuName = name;
     },
-=======
-    // navClick(index, name) {
-    //   this.navIndex = index;
-    //   sessionStorage.setItem('navIndex',index)
-    //   this.menuName = name;
-    // },
-=======
-    //跳转到登录页
-    login(){
-      this.$router.push({ path: "/login" });
-    },
-    navClick(index, name) {
-      this.navIndex = index;
-      sessionStorage.setItem("navIndex", index);
-      this.menuName = name;
-    },
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
->>>>>>> 103449e3af5f301d90f2301d516dd7e5439dbe1e
     menuClick() {
       if (this.menuClass == "glyphicon glyphicon-menu-down") {
         this.menuClass = "glyphicon glyphicon-menu-up";
@@ -623,7 +562,6 @@ export default {
     bottom: 0;
     margin: auto;
   }
-<<<<<<< HEAD
   #header .header-nav .header-nav-logo img{
     position: absolute;
     top: 50px;
@@ -636,19 +574,6 @@ export default {
     width: 28px !important; 
     margin-left: 89%;
     padding-top: 5%;
-=======
-
-  .header-nav-logo {
-    display: none;
-  }
-  /*导航塘主 */
-  #header .myIcon {
-    display: none;
-  }
-  /*登录/注册 btn*/
-  .header-btn {
-    display: none;
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
   }
   /* 导航栏  菜单容器 */
   /* #header .header-nav-m .header-nav-m-menu {
@@ -698,19 +623,6 @@ export default {
     padding: 15px 0;
     position: relative;
   }
-<<<<<<< HEAD
-=======
-  /* 导航栏 每个导航下面的 a 链接 鼠标滑上去的样式 */
-  #header .header-nav-m .header-nav-m-wrapper > li > a:hover {
-    color: #6c98fe;
-    text-decoration: none;
-  }
-  /* 导航栏 每个导航下面的 a 链接 鼠标点击后的样式 */
-  #header .header-nav-m .header-nav-m-wrapper > li.active > a {
-    color: #6c98fe;
-    text-decoration: none;
-  }
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
   /* 导航栏 每个导航下面的 a 链接的右侧小三角 */
   #header .header-nav .header-nav-wrapper > li > a > span {
     font-size: 10px;

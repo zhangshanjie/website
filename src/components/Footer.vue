@@ -216,15 +216,7 @@ export default {
   width: 100%;
   height: 100px;
 }
-<<<<<<< HEAD
-.row{
-  margin-right: 0;
-  margin-left: 0;
-}
-@media (min-width: 1280px) {
-=======
 @media (min-width: 1400px) {
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
   .container {
     width: 1400px;
   }
