@@ -18,7 +18,7 @@ export default new Router({
         }, {
           path: '/home',
           name: 'home',
-          component: resolve => require(['@/view/HomePage'], resolve),
+          component: resolve => require(['@/view/Banner'], resolve),
           meta: {
             title: '首页'
           }
@@ -93,6 +93,14 @@ export default new Router({
           component: resolve => require(['@/view/ServiceDetail'],resolve),
           meta: {
             title: '相关服务'
+          }
+        },
+        {
+          path: '/Enroll',
+          name: 'Enroll',
+          component: resolve => require(['@/view/Enroll'],resolve),
+          meta: {
+            title: '注册'
           }
         }
       ]

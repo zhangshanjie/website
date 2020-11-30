@@ -1,5 +1,6 @@
 <template>
   <div id="HomePage">
+    <Header></Header>
     <!-- 轮播图 -->
     <div id="swiper" class="container-fuild">
       <div class="swiper-container banner-swiper">
@@ -16,12 +17,20 @@
         <div class="swiper-button-next"></div>
       </div>
     </div>
+    <!--搜索-->
+    <el-input placeholder="输入你想要搜索的内容" >
+      <template slot="append"><img class="select" src="@/assets/img/select.png" alt=""></template>
+    </el-input>
+    <Footer></Footer>
   </div>
 </template>
 <script>
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
 import Swiper from "swiper";
 import { WOW } from 'wowjs';
 export default {
+  components: { Header },
   name: "HomePage",
   data() {
     return {
@@ -124,6 +133,43 @@ export default {
     height: 55px;
     background-size: 60px 60px;
   }
+  /**搜索 */
+  .el-input-group {
+    line-height: normal;
+    display: inline-table;
+    width: 568px; height: 60px;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+    top: -150px;
+    bottom: 0;
+    left: 32%;
+    z-index: 99;
+  }
+  /deep/ .el-input-group__append {
+    border-left: 0;
+    background: #fff;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .el-input-group--append .el-input__inner, .el-input-group__prepend {
+    border-right: none;
+  }
+  /deep/ .el-input__inner {
+    -webkit-appearance: none;
+    background-color: #FFF;
+    background-image: none;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 50px;
+    line-height: 50px;
+    border-right: 0;
+  }
+  .select{
+    width: 49px; height: 49px;
+  }
 
 /* 媒体查询（手机） */
 @media screen and (max-width: 768px) {
@@ -148,7 +194,7 @@ export default {
 }
   .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
     background-image: url('../assets/img/right.png')  !important;
-    right:-22px
+    right:-8px
   }
   .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
     background-image: url('../assets/img/left.png')  ;

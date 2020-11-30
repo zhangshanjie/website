@@ -59,7 +59,7 @@
             <li v-for="(item,index) in menuList"> 
               <div class="oneMenu" @click="showToggle(item,index)"> 
               <img v-bind:src="item.imgUrl" /> 
-              <span id="names">{{item.name}}</span> 
+              <span id="names"  @click="toggle(index)" :class="{'active':index ==checkindex }">{{item.name}}</span> 
               </div> 
               <ul v-show="item.isSubShow"> 
               <li v-for="subItem in item.subItems"> 
@@ -91,6 +91,7 @@ export default {
   name: "Header",
   data() {
     return {
+      checkindex: 0, // 初始化第一个栏块高亮
       navIndex: sessionStorage.getItem('navIndex') ? sessionStorage.getItem('navIndex') : 0,
       // menuName: "首页",
       menuClass: "glyphicon glyphicon-menu-down",
@@ -333,16 +334,18 @@ export default {
   
   },
   methods: {
+    toggle (index) {
+      this.checkindex = index
+    },
 // 点击展开折叠菜单事件 
-   showToggle:function(item,ind){ 
-     document.getElementById("names").style.color = "#6C98FE";
-     $(".oneMenu").on("touchstart", function() {
-      $(this).css({opacity:0.8});
-});
+   showToggle(item,ind){ 
+//      $(".oneMenu").on("touchstart", function() {
+//       $(this).css({opacity:0.8});
+// });
     this.menuList.forEach(i => { 
      // 判断如果数据中的menuList[i]的show属性不等于当前数据的isSubShow属性那么menuList[i]等于false 
      if (i.isSubShow !== this.menuList[ind].isSubShow) { 
-      i.isSubShow = false; 
+        i.isSubShow = false; 
      } 
     }); 
     item.isSubShow = !item.isSubShow; 
@@ -350,11 +353,11 @@ export default {
    }, 
 
 
-    // navClick(index, name) {
-    //   this.navIndex = index;
-    //   sessionStorage.setItem('navIndex',index)
-    //   this.menuName = name;
-    // },
+    navClick(index, name) {
+      this.navIndex = index;
+      sessionStorage.setItem('navIndex',index)
+      this.menuName = name;
+    },
     menuClick() {
       if (this.menuClass == "glyphicon glyphicon-menu-down") {
         this.menuClass = "glyphicon glyphicon-menu-up";
@@ -526,6 +529,13 @@ export default {
 @media screen and (max-width: 997px) {
   #header .header-nav-m {
     position: relative;
+  }
+  .glyphicon{
+    right: 10px;
+  }
+  .active {
+    color: #6C98FE;
+    font-weight: bold;
   }
   /* 导航栏logo容器 */
   #header .header-nav-m .header-nav-m-logo {
