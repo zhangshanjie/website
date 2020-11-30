@@ -94,7 +94,24 @@ export default new Router({
           meta: {
             title: '相关服务'
           }
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: resolve => require(['@/components/login'],resolve),
+          meta: {
+            title: '登录'
+          }
+        },
+        {
+          path: '/ForgetPsd',
+          name: 'ForgetPsd',
+          component: resolve => require(['@/view/ForgetPsd'],resolve),
+          meta: {
+            title: '忘记密码'
+          }
         }
+        
       ]
     }
   ]
