@@ -22,26 +22,44 @@
             >
               <i slot="prefix"
                 ><el-image
-                  style="width: 100%; height: 20px; margin-top: 10px"
+                  style="width: 11px; height: 18px; margin-top: 10px"
                   src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/ec91321d039a4daebd75d9ed8b6e8a62.png"
-                  :fit="fit"
+                 
                 ></el-image>
               </i>
             </el-input>
           </el-form-item>
           <el-form-item prop="pass">
             <el-input
+             :type="view == true ? 'password' : 'text'"
               placeholder="请输入密码"
               v-model="loginform.password"
               style="width: 260px; height: 38px; border-radius: 4px"
             >
               <i slot="prefix"
                 ><el-image
-                  style="width: 100%; height: 20px; margin-top: 10px"
+                  style="width: 14px; height: 16px; margin-top: 10px"
                   src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/bb837702e61c401bbf1d26cd09c42459.png"
-                  :fit="fit"
+                 
                 ></el-image>
               </i>
+               <i slot="suffix" v-if="view">
+                  <el-image
+                    @click.stop="openView"
+                    class="openViews"
+                    style="width: 17px; height: 9px; margin-top: 10px"
+                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/4970a1c2dee446f6b509052262cc508d.png"
+                  ></el-image>
+                </i>
+                <i slot="suffix" v-else>
+                  <el-image
+                    @click.stop="closeView"
+                    class="closeView"
+                    style="width: 18px; margin-top: 10px"
+                    src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/258298badd8e4676b401fef284a62516.png"
+                  ></el-image>
+                </i>
+              
             </el-input>
             <!-- 新用户去注册 -->
             <div class="login_flexBox">
@@ -51,14 +69,20 @@
                 >
               </div>
               <div class="forget_psd">
-                <el-button type="text" class="new_users">忘记密码?</el-button>
+                <el-button type="text" @click="forget" class="new_users">忘记密码?</el-button>
               </div>
             </div>
           </el-form-item>
 
-          <el-form-item style="margin-top:-15px">
+          <!-- <el-form-item style="margin-top:-15px">
              <el-button  style="width:260px">登 录</el-button>
-          </el-form-item>
+          </el-form-item> -->
+          <el-form-item>
+              <el-image
+                class="submit_login"
+                src="http://fishingcircles.oss-cn-beijing.aliyuncs.com/4148d47f3a32467eb8e9be5736db1dba.png"
+              ></el-image>
+            </el-form-item>
         </el-form>
       </div>
     </div>
@@ -70,6 +94,7 @@ export default {
   name: "login",
   data() {
     return {
+      view:true,
       labelPosition: "right",
       loginform: {
         name: "",
@@ -143,6 +168,18 @@ export default {
         }
       });
     },
+    //忘记密码
+    forget(){
+        this.$router.push({ path: "/ForgetPsd" });
+    },
+     //关闭密码明文
+    closeView() {
+      this.view = true;
+    },
+    //开启确认明文
+    openView() {
+      this.view = false;
+    },
   },
   mounted() {},
 };
@@ -158,7 +195,7 @@ a {
   display: flex;
   padding: 200px 0;
   width: 100%;
-  height: 100%;
+  height: 973px;
   background: url(http://fishingcircles.oss-cn-beijing.aliyuncs.com/651062bd3e014de78bed8116542f6f56.png)
     no-repeat center;
   background-repeat: no-repeat;
@@ -220,5 +257,13 @@ a {
 }
 .forget_psd {
   margin-left: 120px;
+}
+.submit_login{
+  position: absolute;
+  right: 51%;
+  width: 290px;
+  cursor: pointer;
+
+
 }
 </style>

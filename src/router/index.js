@@ -102,7 +102,16 @@ export default new Router({
           meta: {
             title: '登录'
           }
+        },
+        {
+          path: '/ForgetPsd',
+          name: 'ForgetPsd',
+          component: resolve => require(['@/view/ForgetPsd'],resolve),
+          meta: {
+            title: '忘记密码'
+          }
         }
+        
       ]
     }
   ]
