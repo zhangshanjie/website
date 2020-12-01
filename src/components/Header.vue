@@ -36,7 +36,7 @@
         <img src="@/assets/img/myIcon.png" />
       </div>
       <!--登录/注册-->
-      <button class="header-btn" >注册/登录</button>
+      <button class="header-btn">注册/登录</button>
     </div>
 
     <!-- 手机导航 -->
@@ -338,19 +338,17 @@ export default {
   
   },
   methods: {
+    //手机菜单切换颜色
     toggle (index) {
       this.checkindex = index
     },
-// 点击展开折叠菜单事件 
-   showToggle(item,ind){ 
-//      $(".oneMenu").on("touchstart", function() {
-//       $(this).css({opacity:0.8});
-// });
-    this.menuList.forEach(i => { 
-     // 判断如果数据中的menuList[i]的show属性不等于当前数据的isSubShow属性那么menuList[i]等于false 
-     if (i.isSubShow !== this.menuList[ind].isSubShow) { 
+    //点击展开折叠菜单事件 
+    showToggle(item,ind){ 
+      this.menuList.forEach(i => { 
+      // 判断如果数据中的menuList[i]的show属性不等于当前数据的isSubShow属性那么menuList[i]等于false 
+      if (i.isSubShow !== this.menuList[ind].isSubShow) { 
         i.isSubShow = false; 
-     } 
+      } 
     }); 
     item.isSubShow = !item.isSubShow; 
     console.log(item.name) 
@@ -541,7 +539,7 @@ export default {
     position: relative;
   }
   .glyphicon{
-    right: 14px;
+    right: -16px;
   }
   .active {
     color: #6C98FE;
@@ -629,7 +627,6 @@ export default {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ececec;
-    padding-right: 26px;
   }
   .active {
     color: #6C98FE;
