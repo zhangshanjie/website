@@ -194,7 +194,7 @@ export default {
 }
   .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
     background-image: url('../assets/img/right.png')  !important;
-    right:-8px
+    right:22px
   }
   .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
     background-image: url('../assets/img/left.png')  ;

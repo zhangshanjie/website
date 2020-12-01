@@ -36,7 +36,7 @@
         <img src="@/assets/img/myIcon.png" />
       </div>
       <!--登录/注册-->
-      <button class="header-btn" @click="login">注册/登录</button>
+      <button class="header-btn" >注册/登录</button>
     </div>
 
     <!-- 手机导航 -->
@@ -60,13 +60,13 @@
         <!-- 导航内容 -->
         <ul id="menu" class="header-nav-m-wrapper collapse"> 
             <ul class="asideMenu"> 
-            <li v-for="(item,index) in menuList"> 
+            <li v-for="(item,index) in menuList" :key="index"> 
               <div class="oneMenu" @click="showToggle(item,index)"> 
               <img v-bind:src="item.imgUrl" /> 
               <span id="names"  @click="toggle(index)" :class="{'active':index ==checkindex }">{{item.name}}</span> 
               </div> 
               <ul v-show="item.isSubShow"> 
-              <li v-for="subItem in item.subItems"> 
+              <li v-for="subItem in item.subItems" :key="item.index"> 
                 <div class="oneMenuChild">{{subItem.name}}</div> 
               </li> 
               </ul> 
@@ -97,6 +97,7 @@ export default {
     return {
       checkindex: 0, // 初始化第一个栏块高亮
       menuName: "首页",
+      navIndex:'',
       menuClass: "glyphicon glyphicon-menu-down",
       navList: [
         {
@@ -226,7 +227,7 @@ export default {
           ]
         }
       ],
-       menuList:[ 
+      menuList:[ 
      { 
       name:'首页', 
       isSubShow:false, 
@@ -540,7 +541,7 @@ export default {
     position: relative;
   }
   .glyphicon{
-    right: 10px;
+    right: 14px;
   }
   .active {
     color: #6C98FE;
@@ -556,8 +557,8 @@ export default {
   #header .header-nav-m .header-nav-m-logo .center-block {
     width: 80%;
     position: absolute;
-    top: 39px;
-    left: -46%;
+    top: 44px;
+    left: -55%;
     right: 0;
     bottom: 0;
     margin: auto;
@@ -581,18 +582,14 @@ export default {
     height: 50px;
     font-size: 16px;
     line-height: 50px;
-<<<<<<< HEAD
     background: #060451;
-=======
-    background: rgba(0, 0, 0, 0.3);
->>>>>>> 4a690994bac74af6c407dd472807d49a85b67d18
     position: relative;
   } */
   /* 导航栏 菜单图标 */
   #header .header-nav-m .header-nav-m-menu-wrapper {
     position: absolute;
     top: 72%;
-    right: 2px;
+    right: 26px;
     margin-top: -20px;
     width: 50px;
     height: 40px;
@@ -632,6 +629,10 @@ export default {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ececec;
+    padding-right: 26px;
+  }
+  .active {
+    color: #6C98FE;
   }
 }
 </style>
