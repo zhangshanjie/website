@@ -175,7 +175,7 @@ export default {
     },
     //已记得去登录
     goLogin(){
-
+       this.$router.push({ path: "/login" });
     },
   },
 };

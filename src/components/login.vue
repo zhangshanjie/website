@@ -64,7 +64,7 @@
             <!-- 新用户去注册 -->
             <div class="login_flexBox">
               <div>
-                <el-button type="text" class="new_users"
+                <el-button type="text" class="new_users" @click="goEnroll"
                   >新用户去注册&gt;</el-button
                 >
               </div>
@@ -180,6 +180,10 @@ export default {
     openView() {
       this.view = false;
     },
+    //去注册
+    goEnroll(){
+       this.$router.push({ path: "/Enroll" });
+    },
   },
   mounted() {},
 };
@@ -260,7 +264,7 @@ a {
 }
 .submit_login{
   position: absolute;
-  right: 51%;
+  right: 56%;
   width: 290px;
   cursor: pointer;
 

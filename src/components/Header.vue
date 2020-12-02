@@ -36,7 +36,7 @@
         <img src="@/assets/img/myIcon.png" />
       </div>
       <!--登录/注册-->
-      <button class="header-btn">注册/登录</button>
+      <button class="header-btn" @click="login" >注册/登录</button>
     </div>
 
     <!-- 手机导航 -->
@@ -146,23 +146,23 @@ export default {
         },
         {
           name: "渔界咨询",
-          path: "/service",
+          path: "/information",
           children: [
             {
               name: "公告",
-              path: "/software/bigData",
+              path: "/information",
             },
             {
               name: "赛事",
-              path: "/software/bigData",
+              path: "/information",
             },
             {
               name: "钓场",
-              path: "/software/bigData",
+              path: "/information",
             },
             {
               name: "渔界攻略",
-              path: "/software/bigData",
+              path: "/information",
             },
           ],
         },
@@ -338,6 +338,10 @@ export default {
   
   },
   methods: {
+    //登录
+    login(){
+        this.$router.push({ path: "/login" });
+    },
     //手机菜单切换颜色
     toggle (index) {
       this.checkindex = index

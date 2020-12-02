@@ -18,7 +18,7 @@ export default new Router({
         }, {
           path: '/home',
           name: 'home',
-          component: resolve => require(['@/view/Banner'], resolve),
+          component: resolve => require(['@/view/index'], resolve),
           meta: {
             title: '首页'
           }
@@ -52,11 +52,11 @@ export default new Router({
             }
           ]
         }, {
-          path: '/service',
-          name: 'service',
-          component: resolve => require(['@/view/Service'], resolve),
+          path: '/information',
+          name: 'information',
+          component: resolve => require(['@/view/information'], resolve),
           meta: {
-            title: '相关服务'
+            title: '渔界资讯'
           }
         }, {
           path: '/newsinformation',
@@ -96,13 +96,38 @@ export default new Router({
           }
         },
         {
-          path: '/Enroll',
-          name: 'Enroll',
-          component: resolve => require(['@/view/Enroll'],resolve),
-          meta: {
-            title: '注册'
-          }
-        }
+          path: '/login',
+          name: 'login',
+          component: resolve => require(['@/components/login'],resolve),
+          meta: {
+            title: '登录'
+          }
+        },
+        {
+          path: '/ForgetPsd',
+          name: 'ForgetPsd',
+          component: resolve => require(['@/view/ForgetPsd'],resolve),
+          meta: {
+            title: '忘记密码'
+          }
+        },
+        {
+          path: '/Enroll',
+          name: 'Enroll',
+          component: resolve => require(['@/view/Enroll'],resolve),
+          meta: {
+            title: '注册'
+          }
+        },
+        {
+          path: '/Banner',
+          name: 'Banner',
+          component: resolve => require(['@/components/Banner'],resolve),
+          meta: {
+            title: '轮播图'
+          }
+          }
+
         
       ]
     }

@@ -1,6 +1,5 @@
 <template>
-  <div id="HomePage">
-    <Header></Header>
+  <div id="Banner">
     <!-- 轮播图 -->
     <div id="swiper" class="container-fuild">
       <div class="swiper-container banner-swiper">
@@ -18,22 +17,20 @@
       </div>
     </div>
     <!--搜索-->
-    <el-input placeholder="输入你想要搜索的内容" >
-      <template slot="append"><img class="select" src="@/assets/img/select.png" alt=""></template>
+    <el-input placeholder="输入你想要搜索的内容" v-model="input3"  >
+       <el-button slot="append" ><img class="select" src="@/assets/img/select.png" alt=""></el-button>
+      <!-- <template slot="append"><img class="select" src="@/assets/img/select.png" alt=""></template> -->
     </el-input>
-    <Footer></Footer>
   </div>
 </template>
 <script>
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
 import Swiper from "swiper";
 import { WOW } from 'wowjs';
 export default {
-  components: { Header },
   name: "HomePage",
   data() {
     return {
+      input3: '',
       swiperList: [
         {
           img: require("@/assets/img/banner.png"),
@@ -150,11 +147,20 @@ export default {
     border-left: 0;
     background: #fff;
     border-radius: 30px;
+  }
+  .el-button{
+    padding: 12px 16px;
+    margin-left: 90%;
+  }
+  /deep/ .el-input-group__append, .el-input-group__prepend{
+    padding: 0 6px;
+    display: inherit;
+    margin-top: -51px;
+    float: right;
+    margin-right: -62px;
+    border: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-  }
-  .el-input-group--append .el-input__inner, .el-input-group__prepend {
-    border-right: none;
   }
   /deep/ .el-input__inner {
     -webkit-appearance: none;
@@ -163,12 +169,37 @@ export default {
     border-radius: 30px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    height: 50px;
-    line-height: 50px;
-    border-right: 0;
+    height: 51px;
+    line-height: 51px;
+    padding: 0px 30px;
+    margin-left: 12%;
+    margin-top: -6%;
+    width: 498px;
   }
   .select{
-    width: 49px; height: 49px;
+    width: 39px;
+    padding-top: 6px;
+    margin-left: -122%;
+  }
+  /deep/ input::-webkit-input-placeholder{
+      color:#CBC8DF;
+      font-size: 16px;
+      font-family: Alibaba PuHuiTi;
+  }
+  /deep/ input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+      color:#CBC8DF;
+      font-size: 16px;
+      font-family: Alibaba PuHuiTi;
+  }
+  /deep/ input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+      color:#CBC8DF;
+      font-size: 16px;
+      font-family: Alibaba PuHuiTi;
+  }
+  /deep/ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+      color:#CBC8DF;
+      font-size: 16px;
+      font-family: Alibaba PuHuiTi;
   }
 
 /* 媒体查询（手机） */
@@ -203,6 +234,9 @@ export default {
   .swiper-button-next, .swiper-button-prev{
     width: 26%;
     background-size: 34px 34px;
+  }
+  /deep/ .el-input__inner{
+    display: none;
   }
 
 }

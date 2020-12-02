@@ -22,8 +22,8 @@
           <i v-show="psd" @click="clearPassword()"></i>
           <img class="check checks" v-show="!ifDisplay" @click="ifDisplay=!ifDisplay" src="../assets/img/enroll/check.png" alt="">
           <img class="check" v-show="ifDisplay" @click="ifDisplay=!ifDisplay" src="../assets/img/enroll/invisible.png" alt="">
-          <div class="loging">已注册，去登陆</div>
-          <img class="into" src="../assets/img/enroll/into.png" alt="">
+          <div class="loging" @click="logings">已注册，去登陆</div>
+          <img class="into" @click="logings" src="../assets/img/enroll/into.png" alt="">
         </div>
         <!--bottom-->
         <div><img class="landing" src="../assets/img/enroll/landing.png" alt=""></div>
@@ -46,6 +46,9 @@ export default {
       clearPassword(){
           this.psd='';
       },
+      logings(){
+        this.$router.push({ path: "/login" });
+      }
     
     }
 }
@@ -130,11 +133,8 @@ export default {
   .cont> p{
     color: #6C98FE;
     font-size: 14px;
-    position: absolute;
-    top: 43.5%;
-    bottom: 0;
-    left: 58%;
-    right: 0;
+    margin-top: -29px;
+    margin-left: 57%;
   }
   .cont> p:hover{
     cursor: pointer;
@@ -173,6 +173,9 @@ export default {
     font-size: 10px;
     float: right;
     margin: 12px 244px;
+  }
+  .loging, .into:hover{
+    cursor: pointer;
   }
   .into{
     float: right;
