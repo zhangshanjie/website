@@ -1,7 +1,8 @@
 <template>
-  <div id="appDownload">
+  <div id="index">
   <Header></Header>
-  <div>
+  <Banner></Banner>
+  <div class="contOne">
     
   </div>
   <Footer></Footer>
@@ -11,9 +12,10 @@
 <script>
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
+import Banner from '../components/Banner.vue';
 export default {
-    name: 'appDownload',
-    components: { Header },
+    name: 'index',
+    components: { Banner },
     data(){
         return{
            

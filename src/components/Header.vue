@@ -60,17 +60,24 @@
         <!-- 导航内容 -->
         <ul id="menu" class="header-nav-m-wrapper collapse"> 
             <ul class="asideMenu"> 
-            <li v-for="(item,index) in menuList" :key="index"> 
-              <div class="oneMenu" @click="showToggle(item,index)"> 
-              <img v-bind:src="item.imgUrl" /> 
-              <span id="names"  @click="toggle(index)" :class="{'active':index ==checkindex }">{{item.name}}</span> 
-              </div> 
-              <ul v-show="item.isSubShow"> 
-              <li v-for="subItem in item.subItems" :key="item.index"> 
-                <div class="oneMenuChild">{{subItem.name}}</div> 
+              <li v-for="(item,index) in menuList" :key="index"> 
+                <div class="oneMenu" @click="showToggle(item,index)"> 
+                  <img v-bind:src="item.imgUrl" /> 
+                  <span id="names"  @click="toggle(index)" :class="{'active':index ==checkindex }">
+                      {{ item.name }}
+                  </span> 
+                </div> 
+                <ul v-show="item.isSubShow" class="oneMenuChilds"> 
+                  <li v-for="subItem in item.subItems" :key="subItem.index" class="oneMenuChild"> 
+                    <!-- <div @click="gopage" class="oneMenuChild">
+                      {{subItem.name}}  
+                    </div>  -->
+                    <router-link :to="subItem.path" v-if="subItem.path!=undefined" class="monicker">
+                        {{ subItem.name }}
+                    </router-link>
+                  </li> 
+                </ul> 
               </li> 
-              </ul> 
-            </li> 
             </ul> 
           <!-- <li
             v-for="(item,index) in navList"
@@ -102,7 +109,7 @@ export default {
       navList: [
         {
           name: "首页",
-          path: "/",
+          path: "/index",
           children: [
             {
               name: "赛事中心",
@@ -196,23 +203,23 @@ export default {
         },
         {
           name: "最新赛事",
-          path: "/jobchance",
+          path: "/Competition",
           children: [
             {
               name: "官方赛",
-              path: "/software/bigData",
+              path: "/Competition",
             },
             {
               name: "主题赛",
-              path: "/software/bigData",
+              path: "/Competition",
             },
             {
               name: "公益赛",
-              path: "/software/bigData",
+              path: "/Competition",
             },
             {
               name: "查看排名",
-              path: "/software/bigData",
+              path: "/Competition",
             },
           ],
         },
@@ -233,16 +240,19 @@ export default {
       isSubShow:false, 
       subItems:[ 
        { 
-        name:'赛事中心'
+        name:'赛事中心',
+        path:'/appDownload'
        }, 
        { 
-        name:'钓点推荐'
+        name:'钓点推荐',
+        path:'/appDownload'
        }, 
       //  { 
       //   name:'渔界咨询'
       //  }, 
        { 
-        name:'视频中心'
+        name:'视频中心',
+        path:'/appDownload'
        } 
       ] 
      }, 
@@ -251,16 +261,20 @@ export default {
       isSubShow:false, 
       subItems:[ 
        { 
-        name:'公司架构'
+        name:'公司架构',
+        path:'/appDownload'
        }, 
        { 
-        name:'营销合作'
+        name:'营销合作',
+        path:'/appDownload'
        }, 
        { 
-        name:'招聘'
+        name:'招聘',
+        path:'/appDownload'
        },
        { 
-        name:'联系我们'
+        name:'联系我们',
+        path:'/appDownload'
        },
       ] 
      }, 
@@ -269,16 +283,20 @@ export default {
       isSubShow:false, 
       subItems:[ 
        { 
-        name:'公告'
+        name:'公告',
+        path:'/appDownload'
        }, 
        { 
-        name:'赛事'
+        name:'赛事',
+        path:'/appDownload'
        }, 
        { 
-        name:'钓场'
+        name:'钓场',
+        path:'/appDownload'
        },
        { 
-        name:'渔界攻略'
+        name:'渔界攻略',
+        path:'/appDownload'
        },
       ] 
      }, 
@@ -288,21 +306,27 @@ export default {
       isSubShow:false, 
       subItems:[ 
        { 
-        name:'定制出行'
+        name:'定制出行',
+        path:'/appDownload'
        }, 
        { 
-        name:'境内'
+        name:'境内',
+        path:'/appDownload'
        }, 
        { 
-        name:'境外'
+        name:'境外',
+        path:'/appDownload'
        }, 
       ] 
      }, 
      { 
       name:'APP下载', 
-      
       isSubShow:false, 
       subItems:[ 
+        { 
+          name:'APP下载',
+          path:'/appDownload'
+        },
       ] 
      }, 
      { 
@@ -311,16 +335,20 @@ export default {
       isSubShow:false, 
       subItems:[ 
         { 
-        name:'官方赛'
+        name:'官方赛',
+        path:'/Competition'
        }, 
        { 
-        name:'主题赛'
+        name:'主题赛',
+        path:'/Competition'
        }, 
        { 
-        name:'公益赛'
+        name:'公益赛',
+        path:'/Competition'
        },
        { 
-        name:'查看排名'
+        name:'查看排名',
+        path:'/Competition'
        },
       ] 
      }, 
@@ -329,6 +357,10 @@ export default {
       
       isSubShow:false, 
       subItems:[ 
+        {
+        name:'荣耀殿堂',
+        path:'/appDownload'
+        }
       ] 
      }, 
     ] 
@@ -626,11 +658,20 @@ export default {
   #header .header-nav .header-nav-wrapper > li > a > span {
     font-size: 10px;
   }
-  .oneMenu, .oneMenuChild{
-    font-size: 14px;
+  .oneMenu{
+    font-size: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ececec;
+  }
+  .oneMenuChild{
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;   
+  }
+  .monicker{
+    color: #fff  !important;
+    border-bottom: 1px solid #6C98FE;
   }
   .active {
     color: #6C98FE;

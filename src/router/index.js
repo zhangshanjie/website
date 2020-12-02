@@ -14,10 +14,10 @@ export default new Router({
       children: [
         {
           path: '/',
-          redirect: '/home'
+          redirect: '/index'
         }, {
-          path: '/home',
-          name: 'home',
+          path: '/index',
+          name: 'index',
           component: resolve => require(['@/view/index'], resolve),
           meta: {
             title: '首页'
@@ -73,11 +73,11 @@ export default new Router({
             title: '公司介绍'
           }
         }, {
-          path: '/jobchance',
-          name: 'jobchance',
-          component: resolve => require(['@/view/JobChance'], resolve),
+          path: '/Competition',
+          name: 'Competition',
+          component: resolve => require(['@/view/Competition'], resolve),
           meta: {
-            title: '工作机会'
+            title: '最新赛事'
           }
         }, {
           path: '/contactus',

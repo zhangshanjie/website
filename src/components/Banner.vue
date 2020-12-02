@@ -130,6 +130,7 @@ export default {
     height: 55px;
     background-size: 60px 60px;
   }
+  
   /**搜索 */
   .el-input-group {
     line-height: normal;
@@ -235,6 +236,7 @@ export default {
     width: 26%;
     background-size: 34px 34px;
   }
+  /**搜索 */
   /deep/ .el-input__inner{
     display: none;
   }
@@ -258,6 +260,7 @@ export default {
     font-size: 30px;
     margin: 30px 0 15px;
   }
+  /**搜索 */
   /deep/ .el-input__inner {
     background-color: #FFF;
     background-image: none;
