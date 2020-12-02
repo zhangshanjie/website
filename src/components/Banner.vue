@@ -27,7 +27,7 @@
 import Swiper from "swiper";
 import { WOW } from 'wowjs';
 export default {
-  name: "HomePage",
+  name: "Banner",
   data() {
     return {
       input3: '',
@@ -98,7 +98,7 @@ export default {
 </script>
 <style scoped>
 /* 整体盒子 */
-#HomePage {
+#Banner {
   width: 100%;
 }
 
@@ -222,7 +222,7 @@ export default {
   #swiper .banner-swiper .swiper-slide img {
   width: 100%;
   height: 100%;
-}
+  }
   .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
     background-image: url('../assets/img/right.png')  !important;
     right:-20px
@@ -257,6 +257,48 @@ export default {
   #bigData .bigData-device {
     font-size: 30px;
     margin: 30px 0 15px;
+  }
+  /deep/ .el-input__inner {
+    background-color: #FFF;
+    background-image: none;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 37px;
+    line-height: 51px;
+    padding: 0px 30px;
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 240px;
+  }
+  .select{
+    width: 26px;
+    padding-top: 6px;
+    margin-left: -134%;
+  }
+  /deep/ .el-input-group__append, .el-input-group__prepend{
+    margin-top: -37px;
+    margin-right: 249px;
+  }
+  /deep/ input::-webkit-input-placeholder{
+      color:#CBC8DF;
+      font-size: 14px;
+      font-family: Alibaba PuHuiTi;
+  }
+  /deep/ input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+      color:#CBC8DF;
+      font-size: 14px;
+      font-family: Alibaba PuHuiTi;
+  }
+  /deep/ input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+      color:#CBC8DF;
+      font-size: 14px;
+      font-family: Alibaba PuHuiTi;
+  }
+  /deep/ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+      color:#CBC8DF;
+      font-size: 14px;
+      font-family: Alibaba PuHuiTi;
   }
   
 }

@@ -186,11 +186,11 @@ export default {
         },
         {
           name: "APP下载",
-          path: "/companyintroduction",
+          path: "/appDownload",
           children: [
             {
               name: "APP下载",
-              path: "/software/bigData",
+              path: "/appDownload",
             },
           ],
         },

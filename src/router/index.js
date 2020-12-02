@@ -126,7 +126,15 @@ export default new Router({
           meta: {
             title: '轮播图'
           }
-          }
+        },
+        {
+          path: '/appDownload',
+          name: 'appDownload',
+          component: resolve => require(['@/view/appDownload'],resolve),
+          meta: {
+            title: 'APP下载'
+          }
+         }
 
         
       ]
