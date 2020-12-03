@@ -119,10 +119,6 @@ export default {
               name: "钓点推荐",
               path: "/software/smartTown",
             },
-            // {
-            //   name: "渔界咨询",
-            //   path: "/software/smartTown"
-            // },
             {
               name: "视频中心",
               path: "/software/smartTown",
@@ -175,19 +171,19 @@ export default {
         },
         {
           name: "旅钓",
-          path: "/newsinformation",
+          path: "/Brigade",
           children: [
             {
               name: "定制出行",
-              path: "/software/bigData",
+              path: "/Brigade",
             },
             {
               name: "境内",
-              path: "/software/bigData",
+              path: "/Brigade",
             },
             {
               name: "境外",
-              path: "/software/bigData",
+              path: "/Brigade",
             },
           ],
         },
@@ -247,9 +243,6 @@ export default {
         name:'钓点推荐',
         path:'/appDownload'
        }, 
-      //  { 
-      //   name:'渔界咨询'
-      //  }, 
        { 
         name:'视频中心',
         path:'/appDownload'
@@ -307,15 +300,15 @@ export default {
       subItems:[ 
        { 
         name:'定制出行',
-        path:'/appDownload'
+        path:'/Brigade'
        }, 
        { 
         name:'境内',
-        path:'/appDownload'
+        path:'/Brigade'
        }, 
        { 
         name:'境外',
-        path:'/appDownload'
+        path:'/Brigade'
        }, 
       ] 
      }, 

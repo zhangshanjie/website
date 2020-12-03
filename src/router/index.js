@@ -66,11 +66,11 @@ export default new Router({
             title: '新闻动态'
           }
         }, {
-          path: '/companyintroduction',
-          name: 'companyintroduction',
-          component: resolve => require(['@/view/CompanyIntroduction'], resolve),
+          path: '/Brigade',
+          name: 'Brigade',
+          component: resolve => require(['@/view/Brigade'], resolve),
           meta: {
-            title: '公司介绍'
+            title: '旅钓'
           }
         }, {
           path: '/Competition',
