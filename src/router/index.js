@@ -59,6 +59,14 @@ export default new Router({
             title: '渔界资讯'
           }
         }, {
+          path: '/informationDetails',
+          name: 'informationDetails',
+          component: resolve => require(['@/view/informationDetails'], resolve),
+          meta: {
+            title: '渔界资讯详情'
+          }
+        },
+        {
           path: '/newsinformation',
           name: 'newsinformation',
           component: resolve => require(['@/view/NewsInformation'], resolve),
@@ -92,7 +100,7 @@ export default new Router({
           name: 'servicedetail',
           component: resolve => require(['@/view/ServiceDetail'],resolve),
           meta: {
-            title: '相关服务'
+            title: '公司简介'
           }
         },
         {

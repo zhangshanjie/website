@@ -127,28 +127,28 @@ export default {
         },
         {
           name: "公司简介",
-          path: "/software",
+          path: "/ServiceDetail",
           children: [
             {
               name: "公司架构",
-              path: "/software/smartTown",
+              path: "/ServiceDetail",
             },
             {
               name: "营销合作",
-              path: "/software/bigData",
+              path: "/ServiceDetail",
             },
             {
               name: "招聘",
-              path: "/software/bigData",
+              path: "/ServiceDetail",
             },
             {
               name: "联系我们",
-              path: "/software/bigData",
+              path: "/ServiceDetail",
             },
           ],
         },
         {
-          name: "渔界咨询",
+          name: "渔界资讯",
           path: "/information",
           children: [
             {
@@ -255,41 +255,41 @@ export default {
       subItems:[ 
        { 
         name:'公司架构',
-        path:'/appDownload'
+        path:'/ServiceDetail'
        }, 
        { 
         name:'营销合作',
-        path:'/appDownload'
+        path:'/ServiceDetail'
        }, 
        { 
         name:'招聘',
-        path:'/appDownload'
+        path:'/ServiceDetail'
        },
        { 
         name:'联系我们',
-        path:'/appDownload'
+        path:'/ServiceDetail'
        },
       ] 
      }, 
      { 
-      name:'渔界咨询', 
+      name:'渔界资讯', 
       isSubShow:false, 
       subItems:[ 
        { 
         name:'公告',
-        path:'/appDownload'
+        path:'/information'
        }, 
        { 
         name:'赛事',
-        path:'/appDownload'
+        path:'/information'
        }, 
        { 
         name:'钓场',
-        path:'/appDownload'
+        path:'/information'
        },
        { 
         name:'渔界攻略',
-        path:'/appDownload'
+        path:'/information'
        },
       ] 
      }, 

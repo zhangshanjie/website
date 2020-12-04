@@ -130,8 +130,7 @@ export default {
     height: 55px;
     background-size: 60px 60px;
   }
-  
-  /**搜索 */
+      /**搜索 */
   .el-input-group {
     line-height: normal;
     display: inline-table;
@@ -202,6 +201,79 @@ export default {
       font-size: 16px;
       font-family: Alibaba PuHuiTi;
   }
+@media (min-width: 997px) and (max-width: 1200px) {
+    /**搜索 */
+  .el-input-group {
+    line-height: normal;
+    display: inline-table;
+    width: 568px; height: 60px;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+    top: -150px;
+    bottom: 0;
+    left: 32%;
+    z-index: 99;
+  }
+  /deep/ .el-input-group__append {
+    border-left: 0;
+    background: #fff;
+    border-radius: 30px;
+  }
+  .el-button{
+    padding: 12px 16px;
+    margin-left: 90%;
+  }
+  /deep/ .el-input-group__append, .el-input-group__prepend{
+    padding: 0 6px;
+    display: inherit;
+    margin-top: -51px;
+    float: right;
+    margin-right: 29%;
+    border: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  /deep/ .el-input__inner {
+    -webkit-appearance: none;
+    background-color: #FFF;
+    background-image: none;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 51px;
+    line-height: 51px;
+    padding: 0px 30px;
+    margin-left: 3%;
+    margin-top: 1%;
+    width: 58%;
+  }
+  .select{
+    width: 39px;
+    padding-top: 6px;
+    margin-left: -122%;
+  }
+  /deep/ input::-webkit-input-placeholder{
+      color:#CBC8DF;
+      font-size: 16px;
+      font-family: Alibaba PuHuiTi;
+  }
+  /deep/ input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+      color:#CBC8DF;
+      font-size: 16px;
+      font-family: Alibaba PuHuiTi;
+  }
+  /deep/ input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+      color:#CBC8DF;
+      font-size: 16px;
+      font-family: Alibaba PuHuiTi;
+  }
+  /deep/ input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+      color:#CBC8DF;
+      font-size: 16px;
+      font-family: Alibaba PuHuiTi;
+  }
+} 
 
 /* 媒体查询（手机） */
 @media screen and (max-width: 768px) {
@@ -267,21 +339,21 @@ export default {
     border-radius: 30px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    height: 37px;
+    height: 30px;
     line-height: 51px;
     padding: 0px 30px;
     margin-left: 5%;
-    margin-top: 3%;
-    width: 240px;
+    margin-top: 5%;
+    width: 44%;
   }
   .select{
-    width: 26px;
-    padding-top: 6px;
-    margin-left: -134%;
+    width: 24px;
+    padding-top: 1px;
+    margin-left: -159%;
   }
   /deep/ .el-input-group__append, .el-input-group__prepend{
-    margin-top: -37px;
-    margin-right: 249px;
+    margin-top: -30px;
+    margin-right: 46%;
   }
   /deep/ input::-webkit-input-placeholder{
       color:#CBC8DF;
