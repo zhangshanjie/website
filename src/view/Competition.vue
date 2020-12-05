@@ -16,8 +16,8 @@
     事，并选择比赛类型和积分模式
 完善赛事信息后，确认无误后，才可正
                     式发布比赛</p>
-          <p class="details">查看详情</p>
-          <p class="symbol">︾</p>
+          <p class="details" @click="goDetails">查看详情</p>
+          <p class="symbol" @click="goDetails">︾</p>
         </div>
         <!--two-->
         <div class="card col-xs-1">
@@ -28,8 +28,8 @@
 设置常规赛赛事设置，淘汰赛赛事设置
 
 </p>
-          <p class="details">查看详情</p>
-          <p class="symbol">︾</p>
+          <p class="details" @click="goDetails">查看详情</p>
+          <p class="symbol" @click="goDetails">︾</p>
         </div>
         <!--three-->
         <div class="card col-xs-1">
@@ -39,8 +39,8 @@
     输入成绩
     常规赛事
   对抗淘汰赛</p>
-          <p class="details">查看详情</p>
-          <p class="symbol">︾</p>
+          <p class="details" @click="goDetails">查看详情</p>
+          <p class="symbol" @click="goDetails">︾</p>
         </div>
         <!--four-->
         <div class="card col-xs-1">
@@ -50,12 +50,12 @@
     报名
 扫码报到
 比赛抽签</p>
-          <p class="details">查看详情</p>
-          <p class="symbol">︾</p>
+          <p class="details" @click="goDetails">查看详情</p>
+          <p class="symbol" @click="goDetails">︾</p>
         </div>
       </div>
   </div>
-  <div class="container-fluid">
+  <div class="container">
     <p class="headlineTwo">了解我们的赛事情况</p>
     <p class="titleTwo">Learn about our events</p>
     <div class="overcont">
@@ -116,7 +116,7 @@
               </div>
             </div>
           </el-tab-pane>
-          <div class="check">查看更多 》</div>
+          <div class="check" @click="goMore">查看更多 》</div>
           <!--进行中-->
           <el-tab-pane label="进行中" name="second">22</el-tab-pane>
           <!--已结束-->
@@ -162,22 +162,22 @@
           <!--table内容-->
           <table class="tableOver">
             <tr class="trOver">
-              <th><img src="../assets/img/competition/golden.png" alt=""></th>
+              <th><img src="../assets/img/golden.png" alt=""></th>
               <th>220</th>
               <th>未开始</th>
             </tr>
             <tr class="trOver">
-              <th><img src="../assets/img/competition/cuprum.png" alt=""></th>
+              <th><img src="../assets/img/cuprum.png" alt=""></th>
               <th>210</th>
               <th>未开始</th>
             </tr>
             <tr class="trOver">
-              <th><img src="../assets/img/competition/silver.png" alt=""></th>
+              <th><img src="../assets/img/silver.png" alt=""></th>
               <th>200</th>
               <th>未开始</th>
             </tr>
           </table>
-          <div class="more">查看排名 》</div>
+          <div class="more" @click="goRanking">查看排名 》</div>
         </div>
     </div>
       
@@ -202,6 +202,20 @@ export default {
   },
   mounted(){
 
+  },
+  methods:{
+    //查看详情
+    goDetails(){
+      this.$router.push({path:'/CompetitionDetails'});
+    },
+    //查看排名
+    goRanking(){
+      this.$router.push({path:'/CompetitionRanking'});
+    },
+    //查看更多
+    goMore(){
+      this.$router.push({path:'/CompetitionMore'});
+    }
   }
 };
 </script>
@@ -316,20 +330,18 @@ export default {
   }
   /**cont */
   /deep/ .el-tabs__header{
-    width: 680px; 
-    margin-left: 31%;
+    width: 100%; 
   }
   /deep/ .el-tabs__content{
-    width: 680px;
+    width: 100%;
     height: 100%;
-    margin-left: 31%;
   }
   /deep/ .el-tabs__nav-wrap{
     display: flex;
     justify-content: center;
   }
   /deep/ .el-tabs__nav{
-    width: 680px;
+    width: 600px;
     display: flex;
     justify-content: space-around;
   }
@@ -357,23 +369,24 @@ export default {
   }
   /**内容 left*/
   .leftOne{
-    width: 678px;
-    height: 220px;
+    width: 100%;
     background: #FFFFFF;
     border-radius: 14px;
     display: flex;
     flex-direction: row;
     margin-bottom: 13px;
+    padding-right: 12px;
   }
   .picture{
     width: 180px;
     height: 170px;
     background: #E1E1E1;
     border-radius: 4px;
-    margin: auto 28px;
+    margin: auto 12px;
   }
   .matter{
     margin-top:24px;
+    white-space: nowrap;
   }
   .topic{
     font-size: 22px;
@@ -452,7 +465,7 @@ export default {
   .switcleft{
     position: absolute;
     top: 48%;
-    left: 26%;
+    left: -5%;
   }
   .switcright{
     position: absolute;
@@ -461,7 +474,7 @@ export default {
   }
   /**内容 right */
   .rightTop{
-    width: 432px;
+    width: 100%;
     height: 40px;
     background: #E9E9E9;
     border-radius: 4px;
@@ -475,7 +488,7 @@ export default {
     margin-left: 4%;
   }
   .tableOver{
-    width: 432px;
+    width: 100%;
     height: 234px;
     margin-left: 4%;
     margin-bottom: 30px;
@@ -497,16 +510,14 @@ export default {
   .more{
     color: #C7C7C7;
     font-size: 14px;
-    margin-left: 26%;
+    margin-left: 48%;
+    cursor: pointer;
   }
   
   
 }
 /** */
 @media screen and (max-width: 997px) { 
-  .container-fluid{
-    width: 100%;
-  }
   /**contOne */
   /**标题 */
   .headline{
@@ -597,7 +608,7 @@ export default {
   }
   /**cont */
   /deep/ .el-tabs__header{
-    width: 310px;
+    width:310px;
   }
   /deep/ .el-tabs__content{
     width: 680px;
@@ -638,7 +649,7 @@ export default {
   /**内容 left*/
   .leftOne{
     width: 310px;
-    height: 240px;
+    height: 208px;
     background: #FFFFFF;
     border-radius: 14px;
     display: flex;
@@ -651,30 +662,31 @@ export default {
   }
   .matter{
     margin-top:24px;
+    white-space: nowrap;
   }
   .topic{
-    font-size: 22px;
+    font-size: 15px;
     font-family: Alibaba PuHuiTi;
     color: #444444;
     display: inline;
+    font-weight: 600;
   }
   .gameOne{ 
     font-size: 14px;
     font-family: PingFang SC;
-    font-weight: bold;
     color: #759EFE;
-    border: 2px solid #759EFE;   
+    border: 1px solid #759EFE;   
     border-radius: 4px;
     padding: 2px;
     margin-left: 6px;
   }
   .gameTwo{
     color: #54E4D3;
-    border: 2px solid #54E4D3;  
+    border: 1px solid #54E4D3;  
   }
   .gameThree{
     color: #F28B78;
-    border: 2px solid #F28B78;  
+    border: 1px solid #F28B78;  
   }
   .substance{ 
     font-size: 16px;

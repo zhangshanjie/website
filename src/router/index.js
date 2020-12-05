@@ -80,14 +80,40 @@ export default new Router({
           meta: {
             title: '旅钓'
           }
-        }, {
+        }, 
+        {
           path: '/Competition',
           name: 'Competition',
           component: resolve => require(['@/view/Competition'], resolve),
           meta: {
             title: '最新赛事'
           }
-        }, {
+        },
+        {
+          path: '/CompetitionDetails',
+          name: 'CompetitionDetails',
+          component: resolve => require(['@/view/CompetitionDetails'], resolve),
+          meta: {
+            title: '最新赛事详情'
+          }
+        },
+        {
+          path: '/CompetitionRanking',
+          name: 'CompetitionRanking',
+          component: resolve => require(['@/view/CompetitionRanking'], resolve),
+          meta: {
+            title: '最新赛事排名'
+          }
+        },
+        {
+          path: '/CompetitionMore',
+          name: 'CompetitionMore',
+          component: resolve => require(['@/view/CompetitionMore'], resolve),
+          meta: {
+            title: '赛事中心'
+          }
+        },
+         {
           path: '/contactus',
           name: 'contactus',
           component: resolve => require(['@/view/ContactUs'], resolve),
