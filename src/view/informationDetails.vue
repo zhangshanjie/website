@@ -100,19 +100,13 @@ export default {
     margin-right: 1%;
     margin-top: -2px;
   }
-  /**导航 */
+  /**面包屑 */
   /deep/ .el-breadcrumb{
-    margin-top: -8%;
+    margin-top: -7%;
   }
   /deep/ .el-breadcrumb__inner{
     color: #6C98FE !important;
     font-size: 500 !important;
-  }
-  /deep/ .el-icon-arrow-right:before{
-    background-image: url("../assets/img/navigationBoult.png")  !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
   }
   /**内容 */
   .cont{
@@ -285,20 +279,15 @@ export default {
     margin-right: 1%;
     margin-top: -2px;
   }
-  /**导航 */
+  /**面包屑 */
   /deep/ .el-breadcrumb{
-    margin-top: -8%;
+    margin-top: -7%;
   }
   /deep/ .el-breadcrumb__inner{
     color: #6C98FE !important;
     font-size: 500 !important;
   }
-  /deep/ .el-icon-arrow-right:before{
-    background-image: url("../assets/img/navigationBoult.png")  !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-  }
+
   /**内容 */
   .cont{
     display: flex;
@@ -469,19 +458,13 @@ export default {
     margin-right: 1%;
     margin-top: -2px;
   }
-  /**导航 */
+  /**面包屑 */
   /deep/ .el-breadcrumb{
-    margin-top: -8%;
+    margin-top: -7%;
   }
   /deep/ .el-breadcrumb__inner{
     color: #6C98FE !important;
     font-size: 500 !important;
-  }
-  /deep/ .el-icon-arrow-right:before{
-    background-image: url("../assets/img/navigationBoult.png")  !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
   }
   /**内容 */
   .cont{

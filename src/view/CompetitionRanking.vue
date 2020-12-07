@@ -4,7 +4,7 @@
   <Banner></Banner>
     <div class="container">
       <!--顶部-->
-      <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb separator-class="el-icon-arrow-right navigationIcons">
         <img class="navigationIcon" src="../assets/img/navigationIcon.png" alt="">
         <el-breadcrumb-item :to="{ path: '/Competition' }">最新赛事</el-breadcrumb-item>
         <el-breadcrumb-item>赛事排名</el-breadcrumb-item>
@@ -43,7 +43,7 @@
       :pager-count="5"
       layout="prev, pager, next"
       :total="500">
-    </el-pagination>
+      </el-pagination>
     </div>
   <Footer></Footer>
   </div>
@@ -82,17 +82,17 @@ export default {
     margin-right: 1%;
     margin-top: -2px;
   }
-  /**导航 */
+  /**面包屑 */
   /deep/ .el-breadcrumb{
-    margin-top: -8%;
+    margin-top: -7%;
     margin-bottom: 4%;
   }
   /deep/ .el-breadcrumb__inner{
     color: #6C98FE !important;
     font-size: 500 !important;
   }
-  /deep/ .el-icon-arrow-right:before{
-    background-image: url("../assets/img/navigationBoult.png")  !important;
+  /deep/ .navigationIcons:before{
+    background-image: url("../assets/img/navigationBoult.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -166,6 +166,9 @@ export default {
     background: #6C98FE;
     border-radius: 16px;
     color: #fff;
+  }
+  /deep/ .el-pagination .btn-next{
+    color: #c3c3c3;
   }
 @media (min-width: 1200px){
 

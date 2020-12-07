@@ -122,11 +122,19 @@ export default new Router({
           }
         },
         {
-          path: '/servicedetail',
-          name: 'servicedetail',
+          path: '/ServiceDetail',
+          name: 'ServiceDetail',
           component: resolve => require(['@/view/ServiceDetail'],resolve),
           meta: {
             title: '公司简介'
+          }
+        },
+        {
+          path: '/CompanyProfile',
+          name: 'CompanyProfile',
+          component: resolve => require(['@/view/CompanyProfile'],resolve),
+          meta: {
+            title: '招聘'
           }
         },
         {

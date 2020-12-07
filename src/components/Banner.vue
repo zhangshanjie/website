@@ -107,6 +107,7 @@ export default {
   width: 100%;
   position: relative;
   top: -63px;
+  height: 900px;
 }
 #swiper .banner-swiper {
   width: 100%;
@@ -203,6 +204,7 @@ export default {
   }
 @media (min-width: 997px) and (max-width: 1200px) {
     /**搜索 */
+    
   .el-input-group {
     line-height: normal;
     display: inline-table;
@@ -281,6 +283,7 @@ export default {
     width: 100%;
     position: relative;
     top: 0;
+    height: 100%;
   }
   #bigData {
     padding: 30px;
@@ -321,6 +324,7 @@ export default {
     width: 100%;
     position: relative;
     top: -63px;
+    height: 100%;
   }
   #bigData {
     padding: 60px;

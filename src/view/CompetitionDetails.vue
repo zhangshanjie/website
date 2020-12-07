@@ -4,7 +4,7 @@
   <Banner></Banner>
     <div class="container">
       <!--顶部-->
-      <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb separator-class="el-icon-arrow-right navigationIcons">
         <img class="navigationIcon" src="../assets/img/navigationIcon.png" alt="">
         <el-breadcrumb-item :to="{ path: '/Competition' }">最新赛事</el-breadcrumb-item>
         <el-breadcrumb-item>赛事详情</el-breadcrumb-item>
@@ -243,17 +243,17 @@ export default {
     margin-right: 1%;
     margin-top: -2px;
   }
-  /**导航 */
+  /**面包屑 */
   /deep/ .el-breadcrumb{
-    margin-top: -8%;
+    margin-top: -7%;
     margin-bottom: 4%;
   }
   /deep/ .el-breadcrumb__inner{
     color: #6C98FE !important;
     font-size: 500 !important;
   }
-  /deep/ .el-icon-arrow-right:before{
-    background-image: url("../assets/img/navigationBoult.png")  !important;
+  /deep/ .navigationIcons:before{
+    background-image: url("../assets/img/navigationBoult.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;

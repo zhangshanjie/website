@@ -139,7 +139,7 @@ export default {
             },
             {
               name: "招聘",
-              path: "/ServiceDetail",
+              path: "/CompanyProfile",
             },
             {
               name: "联系我们",
@@ -263,7 +263,7 @@ export default {
        }, 
        { 
         name:'招聘',
-        path:'/ServiceDetail'
+        path:'/CompanyProfile'
        },
        { 
         name:'联系我们',
