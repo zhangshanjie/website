@@ -241,6 +241,7 @@ export default {
   .navigationIcon{
     float: left;
     margin-right: 1%;
+    margin-top: -2px;
   }
   /**导航 */
   /deep/ .el-breadcrumb{
@@ -252,7 +253,10 @@ export default {
     font-size: 500 !important;
   }
   /deep/ .el-icon-arrow-right:before{
-    color: #6C98FE;
+    background-image: url("../assets/img/navigationBoult.png")  !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
   }
 @media (min-width: 1200px){
   /**内容 */

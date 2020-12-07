@@ -76,6 +76,7 @@ export default {
   .navigationIcon{
     float: left;
     margin-right: 1%;
+    margin-top: -2px;
   }
   /**面包屑 */
   /deep/ .el-breadcrumb{
@@ -90,7 +91,10 @@ export default {
     font-size: 16px;
   }
   /deep/ .el-icon-arrow-right:before{
-    color: #C3C3C3;
+    background-image: url("../assets/img/navigationBoult.png")  !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
   }
   /deep/ .el-submenu .is-opened>.el-submenu__title .el-submenu__icon-arrow{
     color:#6C98FE  !important;
