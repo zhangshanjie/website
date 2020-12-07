@@ -32,6 +32,8 @@ import './assets/js/bootstrap.min'
 /* animate.css */
 import 'animate.css'
 
+/**普惠字体 */
+import './assets/css/alibaba-font.css'
  
 /* 头部组件 */
 import Header from './components/Header'

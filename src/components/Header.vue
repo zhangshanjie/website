@@ -203,19 +203,19 @@ export default {
           children: [
             {
               name: "官方赛",
-              path: "/Competition",
+              path: "/CompetitionMore",
             },
             {
               name: "主题赛",
-              path: "/Competition",
+              path: "/CompetitionMore",
             },
             {
               name: "公益赛",
-              path: "/Competition",
+              path: "/CompetitionMore",
             },
             {
               name: "查看排名",
-              path: "/Competition",
+              path: "/CompetitionRanking",
             },
           ],
         },
@@ -341,7 +341,7 @@ export default {
        },
        { 
         name:'查看排名',
-        path:'/Competition'
+        path:'/CompetitionRanking'
        },
       ] 
      }, 
