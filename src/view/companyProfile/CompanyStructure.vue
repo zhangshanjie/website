@@ -1,6 +1,13 @@
 <template>
     <div>
-        <span>公司架构</span>
+        <div class="container">
+            <div class="row">
+                <div class="">
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </template>
 <script>
