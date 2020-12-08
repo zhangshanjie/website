@@ -76,7 +76,7 @@ export default new Router({
         }, {
           path: '/Brigade',
           name: 'Brigade',
-          component: resolve => require(['@/view/Brigade'], resolve),
+          component: resolve => require(['@/view/Brigade/index'], resolve),
           meta: {
             title: '旅钓'
           }
@@ -84,7 +84,7 @@ export default new Router({
         {
           path: '/Competition',
           name: 'Competition',
-          component: resolve => require(['@/view/Competition'], resolve),
+          component: resolve => require(['@/view/Competition/index'], resolve),
           meta: {
             title: '最新赛事'
           }
@@ -92,7 +92,7 @@ export default new Router({
         {
           path: '/CompetitionDetails',
           name: 'CompetitionDetails',
-          component: resolve => require(['@/view/CompetitionDetails'], resolve),
+          component: resolve => require(['@/view/Competition/CompetitionDetails'], resolve),
           meta: {
             title: '最新赛事详情'
           }
@@ -100,7 +100,7 @@ export default new Router({
         {
           path: '/CompetitionRanking',
           name: 'CompetitionRanking',
-          component: resolve => require(['@/view/CompetitionRanking'], resolve),
+          component: resolve => require(['@/view/Competition/CompetitionRanking'], resolve),
           meta: {
             title: '最新赛事排名'
           }
@@ -108,7 +108,7 @@ export default new Router({
         {
           path: '/CompetitionMore',
           name: 'CompetitionMore',
-          component: resolve => require(['@/view/CompetitionMore'], resolve),
+          component: resolve => require(['@/view/Competition/CompetitionMore'], resolve),
           meta: {
             title: '赛事中心'
           }
@@ -132,15 +132,31 @@ export default new Router({
         {
           path: '/CompanyProfile',
           name: 'CompanyProfile',
-          component: resolve => require(['@/view/CompanyProfile'],resolve),
+          component: resolve => require(['@/view/CompanyProfile/index'],resolve),
+          meta: {
+            title: '公司简介'
+          }
+        },
+        {
+          path: '/recruit',
+          name: 'recruit',
+          component: resolve => require(['@/view/CompanyProfile/recruit/index'],resolve),
           meta: {
             title: '招聘'
           }
         },
         {
+          path: '/position',
+          name: 'position',
+          component: resolve => require(['@/view/CompanyProfile/recruit/position'],resolve),
+          meta: {
+            title: '公司职位'
+          }
+        },
+        {
           path: '/login',
           name: 'login',
-          component: resolve => require(['@/components/login'],resolve),
+          component: resolve => require(['@/view/login/index'],resolve),
           meta: {
             title: '登录'
           }
@@ -148,7 +164,7 @@ export default new Router({
         {
           path: '/ForgetPsd',
           name: 'ForgetPsd',
-          component: resolve => require(['@/view/ForgetPsd'],resolve),
+          component: resolve => require(['@/view/ForgetPsd/index'],resolve),
           meta: {
             title: '忘记密码'
           }
@@ -156,7 +172,7 @@ export default new Router({
         {
           path: '/Enroll',
           name: 'Enroll',
-          component: resolve => require(['@/view/Enroll'],resolve),
+          component: resolve => require(['@/view/Enroll/index'],resolve),
           meta: {
             title: '注册'
           }
@@ -172,7 +188,7 @@ export default new Router({
         {
           path: '/appDownload',
           name: 'appDownload',
-          component: resolve => require(['@/view/appDownload'],resolve),
+          component: resolve => require(['@/view/appDownload/index'],resolve),
           meta: {
             title: 'APP下载'
           }

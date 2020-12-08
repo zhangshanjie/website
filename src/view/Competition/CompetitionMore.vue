@@ -5,7 +5,7 @@
     <div class="container">
       <!--顶部-->
       <el-breadcrumb separator-class="el-icon-arrow-right navigationIcons">
-        <img class="navigationIcon" src="../assets/img/navigationIcon.png" alt="">
+        <img class="navigationIcon" src="@/assets/img/navigationIcon.png" alt="">
         <el-breadcrumb-item :to="{ path: '/Competition' }">最新赛事</el-breadcrumb-item>
         <el-breadcrumb-item>赛事中心</el-breadcrumb-item>
       </el-breadcrumb>
@@ -105,9 +105,9 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
-import Banner from '../components/Banner.vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+import Banner from '@/components/Banner.vue';
 export default {
     name: 'CompetitionMore',
     components: { Banner },
@@ -150,7 +150,7 @@ export default {
     font-size: 16px;
   }
   /deep/ .navigationIcons:before{
-    background-image: url("../assets/img/navigationBoult.png") !important;
+    background-image: url("../../assets/img/navigationBoult.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;

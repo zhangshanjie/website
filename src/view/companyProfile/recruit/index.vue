@@ -9,10 +9,10 @@
           <div class="md-col-6">
             <div class="row">
               <div class="CompanyProfile_header">
-                <div class="first_header col-md-12">
+                <div class="first_header col-md-12" @click="Campus(1)" :class='{active:active == 1}'>
                   <img
                     class="Fresh_students_ph"
-                    src="../assets/img/logo_K.png"
+                    src="@/assets/img/logo_K.png"
                     alt="职场精英"
                   />
                   <p class="Fresh_students">
@@ -21,10 +21,10 @@
                   <span class="Campus_Recruitment">校园招聘</span>
                   <i class="el-icon-right right"></i>
                 </div>
-                <div class="second_header col-md-12">
+                <div class="second_header col-md-12" @click="Social(2)" :class='{active:active == 2}'>
                   <img
                     class="Workplace"
-                    src="../assets/img/logo_j.png"
+                    src="@/assets/img/logo_j.png"
                     alt="应届生"
                   />
                   <p class="Career_ero">
@@ -36,47 +36,9 @@
               </div>
             </div>
           </div>
+         
+            <component :is="currentTabComponent"></component>
 
-          <!-- 职位标题 -->
-          <div class="position">
-            <div class="title_flex">
-              <p class="title">社会招聘职位</p>
-              <p class="english">Social recruitment position</p>
-            </div>
-          </div>
-          <!-- 详细职位 -->
-          <div class="position_details">
-            <table class="form">
-              <tr class="secondly info">
-                <th>共<a href="">10</a>条</th>
-                <th style="font-size: 14px">截止到2021.02.06</th>
-              </tr>
-              <tr class="secondly">
-                <th>后端开发</th>
-                <th>合肥</th>
-                <th>本科</th>
-                <th>开发部</th>
-                <th><i class="el-icon-right"></i></th>
-              </tr>
-              <tr class="secondly">
-                <th>后端开发</th>
-                <th>合肥</th>
-                <th>本科</th>
-                <th>开发部</th>
-                <th><i class="el-icon-right"></i></th>
-              </tr>
-              <tr class="secondly">
-                <th>后端开发</th>
-                <th>合肥</th>
-                <th>本科</th>
-                <th>开发部</th>
-                <th><i class="el-icon-right"></i></th>
-              </tr>
-            </table>
-            <div class="foot">
-              <p>暂无更多岗位~</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -84,15 +46,32 @@
   </div>
 </template>
 <script>
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
-import Banner from "../components/Banner.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+import Banner from "@/components/Banner.vue";
+import Social  from "@/view/companyProfile/recruit/Social.vue"
+import Campus  from "@/view/companyProfile/recruit/Campus.vue"
 export default {
   name: "CompanyProfile",
-  components: { Banner, Footer },
+  components: { Banner, Footer,Header,Campus,Social },
   data() {
-    return {};
+    return {
+      active:"1",
+      currentTabComponent:"Campus"
+    };
   },
+  methods:{
+    //校园招聘
+    Campus(type){
+      this.active = type;
+      this.currentTabComponent = "Campus"
+    },
+    //社招
+    Social(type){
+      this.active = type;
+      this.currentTabComponent = "Social"
+    }
+  }
 };
 </script>
 <style  scoped>
@@ -155,9 +134,13 @@ export default {
   margin-left: 79px;
   width: 424px;
   height: 164px;
-  background: #6c98fe;
+  background: #ebebeb;
   border-radius: 4px;
   position: relative;
+}
+.active{
+  background: #6c98fe;
+
 }
 .Workplace {
   position: absolute;
@@ -170,13 +153,15 @@ export default {
   top: 37px;
   height: 30px;
   line-height: 4px;
-  border-bottom: solid 2px #f4f4f4;
+  border-bottom: solid 2px #dddddd;
+ 
 }
 .Career_ero > span {
   font-size: 30px;
   font-family: 'AlibabaPuHuiTi-Medium';
   font-weight: 500;
-  color: #ffffff;
+
+  color: #474747;
 }
 .Social_recruitment {
   position: absolute;
@@ -186,7 +171,9 @@ export default {
   font-size: 16px;
   font-family: 'AlibabaPuHuiTi-Regular';
   font-weight: 400;
-  color: #f2f2f2;
+  /* color: #f2f2f2; */
+  color: #b5b5b5;
+
 }
 .gou {
   position: absolute;

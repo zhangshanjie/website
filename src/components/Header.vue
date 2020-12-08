@@ -127,7 +127,7 @@ export default {
         },
         {
           name: "公司简介",
-          path: "/ServiceDetail",
+          path: "/CompanyProfile",
           children: [
             {
               name: "公司架构",
@@ -139,7 +139,7 @@ export default {
             },
             {
               name: "招聘",
-              path: "/CompanyProfile",
+              path: "/recruit",
             },
             {
               name: "联系我们",

@@ -264,7 +264,7 @@ a {
 }
 .submit_login{
   position: absolute;
-  right: 56%;
+  right: 51%;
   width: 290px;
   cursor: pointer;
 

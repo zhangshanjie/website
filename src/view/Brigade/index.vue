@@ -3,15 +3,15 @@
     <Header></Header>
     <Banner></Banner>
     <div>
-      <img class="images" src="../assets/img/expectation.png" alt="">
+      <img class="images" src="@/assets/img/expectation.png" alt="">
     </div>
     <Footer></Footer>
   </div>
 </template>
 <script>
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
-import Banner from '../components/Banner.vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+import Banner from '@/components/Banner.vue';
 export default {
     name: 'Brigade',
     components: { Banner },

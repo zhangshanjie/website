@@ -2,13 +2,13 @@
   <div id="over">
     <!--背景-->
       <div>
-          <img class="backdrop" src="../assets/img/enroll/bj.png" alt="">
+          <img class="backdrop" src="../../assets/img/enroll/bj.png" alt="">
       </div>
       <!---->
       <div class="setting">
         <!--top-->
         <div class="headline">
-          <img class="backIcon" src="../assets/img/enroll/backIcon.png" alt="">
+          <img class="backIcon" src="../../assets/img/enroll/backIcon.png" alt="">
           <span class="titles">渔界竞钓官网注册</span>
         </div>
         <el-divider></el-divider>
@@ -20,19 +20,19 @@
           <input type="text" placeholder="请设置密码" class="pass" v-model="psd" v-if="ifDisplay">
           <input type="password" placeholder="请设置密码" class="pass" v-model="psd" v-else>
           <i v-show="psd" @click="clearPassword()"></i>
-          <img class="check checks" v-show="!ifDisplay" @click="ifDisplay=!ifDisplay" src="../assets/img/enroll/check.png" alt="">
-          <img class="check" v-show="ifDisplay" @click="ifDisplay=!ifDisplay" src="../assets/img/enroll/invisible.png" alt="">
+          <img class="check checks" v-show="!ifDisplay" @click="ifDisplay=!ifDisplay" src="../../assets/img/enroll/check.png" alt="">
+          <img class="check" v-show="ifDisplay" @click="ifDisplay=!ifDisplay" src="../../assets/img/enroll/invisible.png" alt="">
           <div class="loging" @click="logings">已注册，去登陆</div>
-          <img class="into" @click="logings" src="../assets/img/enroll/into.png" alt="">
+          <img class="into" @click="logings" src="../../assets/img/enroll/into.png" alt="">
         </div>
         <!--bottom-->
-        <div><img class="landing" src="../assets/img/enroll/landing.png" alt=""></div>
+        <div><img class="landing" src="../../assets/img/enroll/landing.png" alt=""></div>
       </div>
   </div>
 </template>
 
 <script>
-import Header from '../components/Header.vue';
+import Header from '../../components/Header.vue';
 export default {
     data(){
         return{
@@ -95,7 +95,7 @@ export default {
     width: 267px; height: 40px;
     border-radius: 4px;
     border: 1px solid #EBEBEB;
-    background-image: url('../assets/img/enroll/phoneIcon.png');
+    background-image: url('../..//assets/img/enroll/phoneIcon.png');
     background-repeat:no-repeat ;
     background-position: 10px 10px;
     margin-top: 6%;
@@ -123,7 +123,7 @@ export default {
     width: 267px; height: 40px;
     border-radius: 4px;
     border: 1px solid #EBEBEB;
-    background-image: url('../assets/img/enroll/authCode.png');
+    background-image: url('../..//assets/img/enroll/authCode.png');
     background-repeat:no-repeat ;
     background-position: 10px 10px;
     margin-top: 2%;
@@ -144,7 +144,7 @@ export default {
     width: 267px; height: 40px;
     border-radius: 4px;
     border: 1px solid #EBEBEB;
-    background-image: url('../assets/img/enroll/password.png');
+    background-image: url('../..//assets/img/enroll/password.png');
     background-repeat:no-repeat ;
     background-position: 10px 10px;
     margin-top: 2%;

@@ -5,7 +5,7 @@
     <div class="container">
       <!--顶部-->
       <el-breadcrumb separator-class="el-icon-arrow-right navigationIcons">
-        <img class="navigationIcon" src="../assets/img/navigationIcon.png" alt="">
+        <img class="navigationIcon" src="@/assets/img/navigationIcon.png" alt="">
         <el-breadcrumb-item :to="{ path: '/Competition' }">最新赛事</el-breadcrumb-item>
         <el-breadcrumb-item>赛事排名</el-breadcrumb-item>
       </el-breadcrumb>
@@ -22,17 +22,17 @@
           <th class="first">姓 名</th>
         </tr>
         <tr class="secondly">
-          <th><img src="../assets/img/golden.png" alt=""></th>
+          <th><img src="@/assets/img/golden.png" alt=""></th>
           <th>210</th>
           <th>王先生</th>
         </tr>
         <tr class="secondly">
-          <th><img src="../assets/img/cuprum.png" alt=""></th>
+          <th><img src="@/assets/img/cuprum.png" alt=""></th>
           <th>210</th>
           <th>王先生</th>
         </tr>
         <tr class="secondly">
-          <th><img src="../assets/img/silver.png" alt=""></th>
+          <th><img src="@/assets/img/silver.png" alt=""></th>
           <th>210</th>
           <th>王先生</th>
         </tr>
@@ -50,9 +50,9 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
-import Banner from '../components/Banner.vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+import Banner from '@/components/Banner.vue';
 export default {
     name: 'CompetitionRanking',
     components: { Banner },
@@ -92,7 +92,7 @@ export default {
     font-size: 500 !important;
   }
   /deep/ .navigationIcons:before{
-    background-image: url("../assets/img/navigationBoult.png") !important;
+    background-image: url("../../assets/img/navigationBoult.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;

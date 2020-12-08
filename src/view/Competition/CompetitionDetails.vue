@@ -5,7 +5,7 @@
     <div class="container">
       <!--顶部-->
       <el-breadcrumb separator-class="el-icon-arrow-right navigationIcons">
-        <img class="navigationIcon" src="../assets/img/navigationIcon.png" alt="">
+        <img class="navigationIcon" src="@/assets/img/navigationIcon.png" alt="">
         <el-breadcrumb-item :to="{ path: '/Competition' }">最新赛事</el-breadcrumb-item>
         <el-breadcrumb-item>赛事详情</el-breadcrumb-item>
       </el-breadcrumb>
@@ -42,8 +42,8 @@
                 </div>
               </div>
               <!--底部内容-->
-              <img class="bonus" src="../assets/img/bonus.png" alt="">
-              <img class="apply" src="../assets/img/apply.png" alt="">
+              <img class="bonus" src="@/assets/img/bonus.png" alt="">
+              <img class="apply" src="@/assets/img/apply.png" alt="">
           </div>
           <!--内容 left_bottom-->
           <div class="content-leftBottom">
@@ -187,12 +187,12 @@
             <!--内容-->
             <div style="display: flex;flex-direction: column;">
               <div class="list">
-                <img class="medal" src="../assets/img/golden.png" alt="">
+                <img class="medal" src="@/assets/img/golden.png" alt="">
                 <div class="mess">210</div>
                 <div class="mess">王先生</div>
               </div>
               <div class="list">
-                <img class="medal" src="../assets/img/golden.png" alt="">
+                <img class="medal" src="@/assets/img/golden.png" alt="">
                 <div class="mess">210</div>
                 <div class="mess">王先生</div>
               </div>
@@ -208,9 +208,9 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
-import Banner from '../components/Banner.vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+import Banner from '@/components/Banner.vue';
 export default {
     name: 'CompetitionDetails',
     components: { Banner },
@@ -253,7 +253,7 @@ export default {
     font-size: 500 !important;
   }
   /deep/ .navigationIcons:before{
-    background-image: url("../assets/img/navigationBoult.png") !important;
+    background-image: url("../../assets/img/navigationBoult.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;

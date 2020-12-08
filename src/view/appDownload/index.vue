@@ -1,14 +1,14 @@
 <template>
   <div id="appDownload">
   <Header></Header>
-    <img class="bj" src="../assets/img/downloads.png" alt="">
+    <img class="bj" src="@/assets/img/downloads.png" alt="">
   <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 export default {
     name: 'appDownload',
     components: { Header },

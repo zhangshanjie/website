@@ -10,7 +10,7 @@
       <div class="cards">
         <!--one-->
         <div class="card col-xs-1">
-          <img class="print" src="../assets/img/competition/one.png" alt="">
+          <img class="print" src="@/assets/img/competition/one.png" alt="">
           <h4 class="designation">主办方</h4>
           <p class="content">点击首页中的发布“+” 按键，发布赛
     事，并选择比赛类型和积分模式
@@ -21,7 +21,7 @@
         </div>
         <!--two-->
         <div class="card col-xs-1">
-          <img class="print" src="../assets/img/competition/two.png" alt="">
+          <img class="print" src="@/assets/img/competition/two.png" alt="">
           <h4 class="designation">主裁判</h4>
           <p class="content">赛事首页中点开“我的赛事”并选择 发
     布的比赛，可进行报名查看和赛事
@@ -33,7 +33,7 @@
         </div>
         <!--three-->
         <div class="card col-xs-1">
-          <img class="print" src="../assets/img/competition/three.png" alt="">
+          <img class="print" src="@/assets/img/competition/three.png" alt="">
           <h4 class="designation">裁判员</h4>
           <p class="content">裁判录入扫码
     输入成绩
@@ -44,7 +44,7 @@
         </div>
         <!--four-->
         <div class="card col-xs-1">
-          <img class="print" src="../assets/img/competition/four.png" alt="">
+          <img class="print" src="@/assets/img/competition/four.png" alt="">
           <h4 class="designation">运动员</h4>
           <p class="content">浏览赛事
     报名
@@ -78,7 +78,7 @@
                 
                 <div class="subcont">联系方式：12345678900</div>
                 <div class="subcont">截止时间：2020.12.12 12:00:00</div>
-                <img class="into" src="../assets/img/competition/into.png" alt="">
+                <img class="into" src="@/assets/img/competition/into.png" alt="">
               </div>
             </div>
             <!--one-->
@@ -95,7 +95,7 @@
                 
                 <div class="subcont">联系方式：12345678900</div>
                 <div class="subcont">截止时间：2020.12.12 12:00:00</div>
-                <img class="into" src="../assets/img/competition/into.png" alt="">
+                <img class="into" src="@/assets/img/competition/into.png" alt="">
               </div>
             </div>
             <!--one-->
@@ -112,7 +112,7 @@
                 
                 <div class="subcont">联系方式：12345678900</div>
                 <div class="subcont">截止时间：2020.12.12 12:00:00</div>
-                <img class="into" src="../assets/img/competition/into.png" alt="">
+                <img class="into" src="@/assets/img/competition/into.png" alt="">
               </div>
             </div>
           </el-tab-pane>
@@ -162,17 +162,17 @@
           <!--table内容-->
           <table class="tableOver">
             <tr class="trOver">
-              <th><img src="../assets/img/golden.png" alt=""></th>
+              <th><img src="@/assets/img/golden.png" alt=""></th>
               <th>220</th>
               <th>未开始</th>
             </tr>
             <tr class="trOver">
-              <th><img src="../assets/img/cuprum.png" alt=""></th>
+              <th><img src="@/assets/img/cuprum.png" alt=""></th>
               <th>210</th>
               <th>未开始</th>
             </tr>
             <tr class="trOver">
-              <th><img src="../assets/img/silver.png" alt=""></th>
+              <th><img src="@/assets/img/silver.png" alt=""></th>
               <th>200</th>
               <th>未开始</th>
             </tr>
@@ -189,9 +189,9 @@
   </div>
 </template>
 <script>
-import Header from '../components/Header.vue';
-import Footer from '../components/Footer.vue';
-import Banner from '../components/Banner.vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+import Banner from '@/components/Banner.vue';
 export default {
   name: "Competition",
   components: { Banner },
