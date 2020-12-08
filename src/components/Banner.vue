@@ -100,6 +100,7 @@ export default {
 /* 整体盒子 */
 #Banner {
   width: 100%;
+  height: 830px;
 }
 
 /* 轮播图 */
@@ -107,7 +108,6 @@ export default {
   width: 100%;
   position: relative;
   top: -63px;
-  height: 900px;
 }
 #swiper .banner-swiper {
   width: 100%;

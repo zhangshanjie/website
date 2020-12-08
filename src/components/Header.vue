@@ -235,6 +235,10 @@ export default {
       name:'首页', 
       isSubShow:false, 
       subItems:[ 
+        { 
+        name:'首页',
+        path:'/index'
+       },
        { 
         name:'赛事中心',
         path:'/appDownload'
@@ -328,16 +332,20 @@ export default {
       isSubShow:false, 
       subItems:[ 
         { 
-        name:'官方赛',
+        name:'最新赛事',
         path:'/Competition'
+       },
+        { 
+        name:'官方赛',
+        path:'/CompetitionMore'
        }, 
        { 
         name:'主题赛',
-        path:'/Competition'
+        path:'/CompetitionMore'
        }, 
        { 
         name:'公益赛',
-        path:'/Competition'
+        path:'/CompetitionMore'
        },
        { 
         name:'查看排名',

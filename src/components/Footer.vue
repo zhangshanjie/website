@@ -225,7 +225,7 @@ export default {
   height: 198px;
   background: #384158;
   border-radius: 2px;
-  margin-left: 26%;
+  margin-left: 4%;
 }
 
 .rq_font {

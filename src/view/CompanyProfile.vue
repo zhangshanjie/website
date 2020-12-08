@@ -1,5 +1,5 @@
 <template>
-  <div class="CompetitionRanking">
+  <div class="CompanyProfile">
     <Header></Header>
     <Banner></Banner>
     <div class="container">
@@ -12,8 +12,8 @@
                 <div class="first_header col-md-12">
                   <img
                     class="Fresh_students_ph"
-                    src="../assets/img/logo_j.png"
-                    alt="公司简介应届生"
+                    src="../assets/img/logo_K.png"
+                    alt="职场精英"
                   />
                   <p class="Fresh_students">
                     <span>应届生</span>
@@ -24,8 +24,8 @@
                 <div class="second_header col-md-12">
                   <img
                     class="Workplace"
-                    src="../assets/img/logo_k.png"
-                    alt="职场精英"
+                    src="../assets/img/logo_j.png"
+                    alt="应届生"
                   />
                   <p class="Career_ero">
                     <span>职场精英</span>
@@ -131,7 +131,7 @@ export default {
   width: 86px;
   height: 28px;
   font-size: 30px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Medium';
   font-weight: 500;
   color: #474747;
 }
@@ -141,7 +141,7 @@ export default {
   top: 86px;
   height: 16px;
   font-size: 16px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Regular'i;
   font-weight: 400;
   color: #b5b5b5;
 }
@@ -174,7 +174,7 @@ export default {
 }
 .Career_ero > span {
   font-size: 30px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Medium';
   font-weight: 500;
   color: #ffffff;
 }
@@ -184,7 +184,7 @@ export default {
   top: 94px;
 
   font-size: 16px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Regular';
   font-weight: 400;
   color: #f2f2f2;
 }
@@ -211,14 +211,14 @@ export default {
   display: block;
   text-align: center;
   font-size: 20px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Medium';
   font-weight: 500;
   color: #333333;
   line-height: 20px;
 }
 .english {
   font-size: 10px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Regular';
   font-weight: 400;
   color: #999999;
   line-height: 20px;
@@ -251,7 +251,7 @@ export default {
 
 .secondly th {
   font-size: 18px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Regular';
   font-weight: 400;
   color: #333333;
 }
@@ -265,26 +265,26 @@ export default {
 
 .secondly > th:not(:first-child) {
   font-size: 16px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Regular';
   font-weight: 400;
   color: #999999;
 }
 .info th {
   font-size: 14px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Regular';
   font-weight: 400;
   color: #666666;
 }
 .foot {
   text-align: center;
   font-size: 14px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Regular';
   font-weight: 400;
   color: #999999;
   line-height: 20px;
   cursor: pointer;
 }
 .foot:hover {
-    color: blue;
+    color: #6c98fe;
 }
 </style>
