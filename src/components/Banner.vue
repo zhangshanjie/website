@@ -100,7 +100,6 @@ export default {
 /* 整体盒子 */
 #Banner {
   width: 100%;
-  height: 830px;
 }
 
 /* 轮播图 */
