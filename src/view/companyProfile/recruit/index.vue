@@ -56,8 +56,8 @@ export default {
   components: { Banner, Footer,Header,Campus,Social },
   data() {
     return {
-      active:this.$route.query.type!==''?this.$route.query.type:'1',
-      currentTabComponent:"Campus"
+      active:this.$route.query.type =='2'?'2':'1',
+      currentTabComponent:this.$route.query.type=='2'?'Social':'Campus'
     };
   },
   // watch:{
