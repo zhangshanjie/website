@@ -234,13 +234,13 @@ export default {
     font-size: 20px; 
     font-weight: 600;
     line-height: 20px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Medium';
     margin:-3% auto;
     width: 180px;
   }
   .title{  
     font-size: 10px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Regular';
     color: #999999;
     line-height: 20px;
     width: 173px;
@@ -272,7 +272,7 @@ export default {
   }
   .designation{
     font-size: 20px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Medium';
     font-weight: 600;
     color: #333333;
     line-height: 20px;
@@ -283,7 +283,7 @@ export default {
   }
   .content{ 
     font-size: 14px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Medium';
     font-weight: 500;
     color: #B8B7B7;
     line-height: 22px;
@@ -292,7 +292,7 @@ export default {
   }
   .details{ 
     font-size: 14px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Regular';
     color: #B8B7B7;
     line-height: 20px;
     margin: -25px auto;
@@ -314,14 +314,14 @@ export default {
     font-size: 20px; 
     font-weight: 600;
     line-height: 20px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Medium';
     margin: 0 auto;
     margin-top: 6%;
     width: 180px;
   }
   .titleTwo{  
     font-size: 10px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Regular';
     color: #999999;
     line-height: 20px;
     width: 133px;
@@ -666,14 +666,14 @@ export default {
   }
   .topic{
     font-size: 15px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Medium';
     color: #444444;
     display: inline;
     font-weight: 600;
   }
   .gameOne{ 
     font-size: 14px;
-    font-family: PingFang SC;
+    font-family: 'PingFang-SC-Bold';
     color: #759EFE;
     border: 1px solid #759EFE;   
     border-radius: 4px;
@@ -690,24 +690,24 @@ export default {
   }
   .substance{ 
     font-size: 16px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Medium';
     color: #999999;
   }
   .angle{
     font-size: 16px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Medium';
     color: #999999;
     margin-left: 64px;
   }
   .bonus{
     font-size: 16px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Medium';
     color: #999999;
     margin-left: 62px;
   }
   .subcont{
     font-size: 16px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Medium';
     color: #999999;
     margin-top: 11px;
   }
@@ -720,7 +720,7 @@ export default {
   /**查看更多 */
   .check{   
     font-size: 14px;
-    font-family: Alibaba PuHuiTi;
+    font-family: 'AlibabaPuHuiTi-Regular';
     color: #4B7BEB;
     cursor: pointer;
     margin-left: 32%;

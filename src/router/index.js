@@ -22,21 +22,7 @@ export default new Router({
           meta: {
             title: '首页'
           }
-        }, {
-          path: '/software',
-          name: 'software',
-          component: resolve => require(['@/view/Software'], resolve),
-          meta: {
-            title: '软件产品'
-          },
-          children: [
-            {
-              path: '/software',
-              redirect: '/software/smartTown'
-            },
-            
-          ]
-        }, {
+        },  {
           path: '/information',
           name: 'information',
           component: resolve => require(['@/view/information'], resolve),
@@ -52,13 +38,6 @@ export default new Router({
           }
         },
         {
-          path: '/newsinformation',
-          name: 'newsinformation',
-          component: resolve => require(['@/view/NewsInformation'], resolve),
-          meta: {
-            title: '新闻动态'
-          }
-        }, {
           path: '/Brigade',
           name: 'Brigade',
           component: resolve => require(['@/view/Brigade/index'], resolve),
@@ -96,22 +75,6 @@ export default new Router({
           component: resolve => require(['@/view/Competition/CompetitionMore'], resolve),
           meta: {
             title: '赛事中心'
-          }
-        },
-         {
-          path: '/contactus',
-          name: 'contactus',
-          component: resolve => require(['@/view/ContactUs'], resolve),
-          meta: {
-            title: '联系我们'
-          }
-        },
-        {
-          path: '/ServiceDetail',
-          name: 'ServiceDetail',
-          component: resolve => require(['@/view/ServiceDetail'],resolve),
-          meta: {
-            title: '公司简介'
           }
         },
         {
