@@ -9,11 +9,11 @@
           <div class="md-col-6">
             <div class="row">
               <div class="CompanyProfile_header">
-                <div class="first_header col-md-12" @click="Campus(1)" :class='{active:active == 1}'>
+                <div class="first_header col-md-12 animated bounceInLeft" @click="Campus(1)" :class='{active:active == 1}'>
                   <img
                     class="Fresh_students_ph"
                     src="@/assets/img/logo_K.png"
-                    alt="职场精英"
+                    alt="应届生"
                   />
                   <p class="Fresh_students">
                     <span>应届生</span>
@@ -21,11 +21,11 @@
                   <span class="Campus_Recruitment">校园招聘</span>
                   <i class="el-icon-right right"></i>
                 </div>
-                <div class="second_header col-md-12" @click="Social(2)" :class='{active:active == 2}'>
+                <div class="second_header col-md-12 animated bounceInRight" @click="Social(2)" :class='{active:active == 2}'>
                   <img
                     class="Workplace"
                     src="@/assets/img/logo_j.png"
-                    alt="应届生"
+                    alt="职场精英"
                   />
                   <p class="Career_ero">
                     <span>职场精英</span>

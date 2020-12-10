@@ -34,22 +34,7 @@ export default new Router({
               path: '/software',
               redirect: '/software/smartTown'
             },
-            {
-              path: '/software/smartTown',
-              name: 'software',
-              component: resolve => require(['@/view/Software_smartTown'], resolve),
-              meta: {
-                title: '软件产品丨智能小镇管理系统'
-              }
-            },
-            {
-              path: '/software/bigData',
-              name: 'software',
-              component: resolve => require(['@/view/Software_bigData'], resolve),
-              meta: {
-                title: '软件产品丨大数据管理系统'
-              }
-            }
+            
           ]
         }, {
           path: '/information',

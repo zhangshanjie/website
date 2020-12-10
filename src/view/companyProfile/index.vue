@@ -90,7 +90,7 @@ export default {
 .company_title > p:nth-child(1) {
   height: 20px;
   font-size: 20px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi';
   font-weight: 500;
   color: #333333;
   line-height: 20px;
@@ -98,7 +98,7 @@ export default {
 .company_title > p:nth-child(2) {
   height: 7px;
   font-size: 10px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi';
   font-weight: 400;
   color: #999999;
   line-height: 12px;
@@ -125,7 +125,7 @@ export default {
   line-height: 46px;
   text-align: center;
   cursor: pointer;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Medium';
   font-weight: 500;
   color: #b0b0b0;
 }

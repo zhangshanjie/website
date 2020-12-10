@@ -109,7 +109,7 @@ export default {
   top: 0;
   left: 19px;
   font-size: 14px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi';
   font-weight: 400;
   color: #6c98fe;
   line-height: 20px;
@@ -119,7 +119,7 @@ export default {
   width: 90px;
   height: 20px;
   font-size: 20px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Medium';
   font-weight: 500;
   color: #333333;
   line-height: 20px;
@@ -130,7 +130,7 @@ export default {
   width: 70px;
   height: 10px;
   font-size: 10px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi';
   font-weight: 400;
   color: #999999;
   line-height: 20px;
@@ -150,7 +150,7 @@ export default {
   width: 89px;
   height: 23px;
   font-size: 24px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Medium';
   font-weight: 400;
   color: #333333;
   line-height: 20px;
@@ -164,6 +164,7 @@ export default {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 1px;
+  font-family: 'Alibaba-PuHuiTi-Regular';
 }
 .duty_content > p:nth-child(4) {
   margin-bottom: 65px;
@@ -178,7 +179,7 @@ export default {
   width: 89px;
   height: 23px;
   font-size: 24px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Medium';
   font-weight: 400;
   color: #333333;
   line-height: 20px;
@@ -188,7 +189,7 @@ export default {
 }
 .requirement_content > p {
   font-size: 14px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Regular';
   font-weight: 400;
   color: #333333;
   line-height: 20px;
@@ -204,7 +205,7 @@ export default {
 .base_j > p:nth-child(1) {
   height: 23px;
   font-size: 24px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi-Medium';
   font-weight: 400;
   color: #333333;
   line-height: 20px;
@@ -212,7 +213,7 @@ export default {
 .base_j > P:nth-child(2) {
   height: 14px;
   font-size: 14px;
-  font-family: Alibaba PuHuiTi;
+  font-family: 'AlibabaPuHuiTi';
   font-weight: 400;
   color: #333333;
   line-height: 20px;
