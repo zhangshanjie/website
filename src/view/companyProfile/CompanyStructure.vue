@@ -16,6 +16,7 @@
         </div>
         <Marketing></Marketing>
         <AboutRecruitment></AboutRecruitment>
+        <ContactUs></ContactUs>
       </div>
     </div>
   </div>
@@ -23,9 +24,10 @@
 <script>
 import Marketing from '@/view/companyProfile/Marketing/index'
 import AboutRecruitment from '@/view/companyProfile/AboutRecruitment/index'
+import ContactUs from '@/view/companyProfile/ContactUs/index'
 export default {
   name: "CompanyStructure",
-  components:{Marketing,AboutRecruitment}
+  components:{Marketing,AboutRecruitment,ContactUs}
 };
 </script>
 <style scoped>

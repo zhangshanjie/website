@@ -56,9 +56,22 @@ export default {
   components: { Banner, Footer,Header,Campus,Social },
   data() {
     return {
-      active:"1",
+      active:this.$route.query.type!==''?this.$route.query.type:'1',
       currentTabComponent:"Campus"
     };
+  },
+  // watch:{
+  //  $route(newVal,oldVal){
+  //    console.log(newVal,oldVal)
+  //    if(this.$route.query.type!==null||this.$route.query.type!==undefined||this.$route.query.type!==''){
+  //      this.active = this.$route.query.type;
+  //    }
+  //  },
+  //  immediate:true
+  
+  // },
+  mounted(){
+    // var newActive = this.$route.query.type
   },
   methods:{
     //校园招聘

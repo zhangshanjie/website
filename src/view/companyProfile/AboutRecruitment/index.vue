@@ -36,7 +36,7 @@
                 <th><i :class="item.icon"></i></th>
               </tr>
               <tr class="more">
-                <th style="font-size: 14px" @click="CampusMore">查看更多</th>
+                <th style="font-size: 14px" @click="CampusMore('1')">查看更多</th>
               </tr>
             </table>
           </div>
@@ -67,7 +67,7 @@
                 <th><i :class="item.icon"></i></th>
               </tr>
               <tr class="more">
-                <th style="font-size: 14px" @click="socialMore">查看更多</th>
+                <th style="font-size: 14px" @click="socialMore('2')">查看更多</th>
               </tr>
             </table>
           </div>
@@ -100,16 +100,16 @@ export default {
       ],
     };
   },
-  methods:{
-      //校园招聘
-      CampusMore(){
-
-      },
-      //社会招聘
-      socialMore(){
-
-      }
-  }
+  methods: {
+    //校园招聘
+    CampusMore(data) {
+      this.$router.push({ name: "recruit", query: { type: data } });
+    },
+    //社会招聘
+    socialMore(data) {
+      this.$router.push({ name: "recruit", query: { type: data } });
+    },
+  },
 };
 </script>
 <style scoped>
@@ -208,13 +208,13 @@ export default {
   color: #333333;
   line-height: 20px;
 }
-.Q_Q{
-    position: relative;
+.Q_Q {
+  position: relative;
 }
-.Social{
-    position:absolute;
-    top: 44px;
-    left: 36px;
+.Social {
+  position: absolute;
+  top: 44px;
+  left: 36px;
 }
 .Social > p:nth-child(1) {
   height: 34px;
